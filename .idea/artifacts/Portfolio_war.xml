@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Portfolio:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>Portfolio</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Portfolio-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Portfolio:war exploded" />
+    </root>
+  </artifact>
+</component>
