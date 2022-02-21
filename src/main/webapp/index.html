@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/homepage.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="profile" href="//gmpg.org/xfn/11">
+    <meta name="description" content="Portfolio">
+    <!--<link rel="icon" type="image/png" href="/icons/logo.png">-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone-no">
+    <meta name="apple-mobile-web-app-title" content="Alberto Montefusco | Computer Science Student">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <!--<link rel="apple-touch-icon" href="${pageContext.request.contextPath}/icons/logo.png">
+    <link rel="apple-touch-startup-image" href="${pageContext.request.contextPath}/icons/logo.png">-->
     <title>Alberto Montefusco | Computer Science Student</title>
-    <script src="js/jquey/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="js/text-change.js"></script>
-    <link rel="stylesheet" href="fontawesome/fontawesome-free-6.0.0-web/css/all.css">
 
-    <link rel="stylesheet" id="css-0-css" href="https://lmpixels.com/wp/leven-wp/dark/wp-content/mmr/fe04f357-1627236043.min.css" type="text/css" media="all">
-    <link rel="stylesheet" id="leven-google-fonts-css" href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" type="text/css" media="all">
-    <script type="text/javascript" src="https://lmpixels.com/wp/leven-wp/dark/wp-content/mmr/01ef1fff-1627236044.min.js" id="js-1-js"></script>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="lib/dark/css/dark.css">
+    <link rel="stylesheet" href="lib/dark/css/font.css">
+    <link rel="stylesheet" href="lib/fontawesome/css/all.css">
+
+    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="lib/jquey/jquery.js"></script>
+    <script src="lib/dark/js/dark.js"></script>
+    <script src="lib/animejs/animejs.js"></script>
+    <script src="js/text-change.js"></script>
+    <script src="js/header.js"></script>
 </head>
 
-<body data-rsssl="1" class="home page-template-default page page-id-157 wp-embed-responsive masthead-fixed full-width grid">
+<body>
 
 <div class="lm-animated-bg" style="background-position: calc(50% + 5.29923px) calc(50% + 6.72491px);"></div>
 
@@ -32,7 +40,9 @@
 <!-- /Loading animation -->
 
 <!-- Scroll To Top Button -->
-<div class="lmpixels-scroll-to-top hidden-btn"><i class="lnr lnr-chevron-up"></i></div>
+<div class="lmpixels-scroll-to-top hidden-btn">
+    <i class="lnr lnr-chevron-up"></i>
+</div>
 <!-- /Scroll To Top Button -->
 
 <div class="page-scroll">
@@ -51,22 +61,21 @@
                 </div>
                 <!-- /Text Logo -->
 
-
                 <!-- Navigation -->
                 <div class="site-nav mobile-menu-hide">
                     <ul id="menu-classic-menu" class="leven-classic-menu site-main-menu">
-                        <li id="menu-item-160">
-                            <a href="javascript:void(0)" aria-current="page" data-hover="1">About Me <i class="arrow down"></i></a>
+                        <li id="menu-item-160" class="current-menu-item">
+                            <a href="javascript:void(0)">About Me <i class="arrow down"></i></a>
                             <ul class="sub-menu">
-                                <li id="menu-item-318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-157 current_page_item menu-item-318"><a href="index.html" aria-current="page" data-hover="1">About Me</a></li>
-                                <li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="javascript:void(0)" data-hover="1">What I DO</a></li>
-                                <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="javascript:void(0)" data-hover="1">Skills</a></li>
-                                <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="javascript:void(0)" data-hover="1">Experience</a></li>
-                                <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="javascript:void(0)" data-hover="1">Education</a></li>
+                               <!--current page <li id="menu-item-318" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-157 current_page_item menu-item-318"><a href="index.html" aria-current="page" data-hover="1">About Me</a></li>-->
+                                <li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="#what_I_Do" data-hover="1">What I DO</a></li>
+                                <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="#Soft_Skills" data-hover="1">Soft Skills</a></li>
+                                <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="#Hobby" data-hover="1">Hobby and Interests</a></li>
+                                <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="#Fun_Facts" data-hover="1">Fun Facts</a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="WEB-INF/resume.html" data-hover="1">Resume</a></li>
-                        <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="WEB-INF/contact.html" data-hover="1">Contact</a></li>
+                        <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="WEB-INF/pages/resume.html" data-hover="1">Resume</a></li>
+                        <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="WEB-INF/pages/contact.html" data-hover="1">Contact</a></li>
                     </ul>
                 </div>
 
@@ -103,10 +112,14 @@
                                                                 <div class="home-text hp-left">
                                                                     <h4 class="txt-eff1">Computer Science Student</h4>
                                                                     <h1>Alberto Montefusco</h1>
-                                                                    <p>I'm a computer science student. Addicted to Cyber Security and AI. I love working in team and managing them.</p>
+                                                                    <p>Learn. Build innovation. Solve problems.<br>
+                                                                        I like playing sports, travelling and solving coding challenges. I am keen on CyberSecurity and AI.
+                                                                        I like testing my capability and improving my skills, in particular informatic ones.
+                                                                        Determination and curiosity are the keywords that better describe my personality.
+                                                                    </p>
                                                                     <div class="home-buttons">
                                                                         <a href="pdf/montefusco-cv.pdf" target="_blank" class="btn btn-primary">Download CV</a>
-                                                                        <a href="https://lmpixels.com/wp/leven-wp/contact/" target="_self" id="" class="btn btn-secondary">Contact</a>
+                                                                        <a href="WEB-INF/pages/contact.html" target="_self" id="" class="btn btn-secondary">Contact</a>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -118,8 +131,8 @@
                                         <div class="row">
                                             <div class=" col-xs-12 col-sm-12 ">
                                                 <div id="col_inner_c2094ed9c996102f2ef70b6125c4fbf5" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                    <div class="fw-divider-space" style="padding-top: 50px;"></div>
-                                                    <div class="block-title">
+                                                    <div class="fw-divider-space" style="padding-top: 50px;" id="what_I_Do"></div>
+                                                    <div class="block-title" >
                                                         <h2>What I Do</h2>
                                                     </div>
                                                 </div>
@@ -136,8 +149,8 @@
                                                             </div>
                                                             <div class="ci-text">
                                                                 <h4>Easy Pass - AI <a href="https://github.com/Alberto-00/EasyPass-AI" target="_blank"> (GitHub Link)</a></h4>
-                                                                <p>Web App for Green Pass validation. In particular, it has been integrated an AI module to place students in a classroom. The placement must follow these rules.
-                                                                    My team and I used a multi-objectives genetic algorithm; in particular, we developed a NSGAII with jMetal framework. The AI module integration is produced for the Fundamentals of Artificial Intelligence course of Computer Science at the University of Salerno.
+                                                                <p>Web App for Green Pass validation. In particular, it has been integrated an AI module to place students in a classroom.
+                                                                    My team and I used a multi-objectives genetic algorithm; in particular, we developed a NSGAII with jMetal framework.
                                                                 </p>
                                                             </div>
                                                         </div>
@@ -185,100 +198,89 @@
                                         <div class="row">
                                             <div class=" col-xs-12 col-sm-12 ">
                                                 <div id="col_inner_28268963d54f17fbf0a61a920e475dcf" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                    <div class="fw-divider-space" style="padding-top: 20px;"></div>
+                                                    <div class="fw-divider-space" style="padding-top: 20px;" id="Soft_Skills"></div>
                                                     <div class="block-title">
-                                                        <h2>Skills</h2>
+                                                        <h2>Soft Skills</h2>
                                                     </div>
                                                     <div class="row mb-9 mb-xl-12 text-white">
-                                                        <div class="col-md-6 mb-4 mb-md-0">
-                                                            <p class="h6 mb-2">Project Management</p>
-                                                            <div class="progress mb-5 rounded-0 bg-gray-700" style="height:5px">
-                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                            <p class="h6 mb-2">Java/Java EE</p>
-                                                            <div class="progress mb-5 rounded-0 bg-gray-700" style="height:5px">
-                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                            <p class="h6 mb-2">Fronted Language (HTML - CSS - JS)</p>
-                                                            <div class="progress mb-5 rounded-0 bg-gray-700" style="height:5px">
-                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                            <p class="h6 mb-2">Relational DB (MySQL - SQL)</p>
-                                                            <div class="progress rounded-0 bg-gray-700" style="height:5px">
-                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
+                                                        <div class="col-md-6 mb-4 mb-md-0 text-white padding-right">
+                                                            <p class="h5 mb-0">Communication and Interpersonal Skills</p>
+                                                            <p>I like working in team, sharing my ideas and paying attention to others. In this way I can improve my
+                                                                skills both technical and social. I share my ideas in a clear and concise way thanks to the various projects to which
+                                                                I participated during the years of study at the University of Salerno. I can also work alone, managing
+                                                                carefully anxiety and time. Also, I adapt easily to changes and pay a lot of attention to detail.
+                                                            </p>
                                                         </div>
-                                                        <div class="col-md-6">
-                                                            <p class="h6 mb-2">Relational DB (MySQL - SQL)</p>
-                                                            <div class="progress mb-5 rounded-0 bg-gray-700" style="height:5px">
-                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                            <p class="h6 mb-2">Design algorithm and data structures with C Language</p>
-                                                            <div class="progress mb-5 rounded-0 bg-gray-700" style="height:5px">
-                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                            <p class="h6 mb-2">Machine Learning algorithm</p>
-                                                            <div class="progress mb-5 rounded-0 bg-gray-700" style="height:5px">
-                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
-                                                            <p class="h6 mb-2">Math and Informatic Statistic</p>
-                                                            <div class="progress mb-5 rounded-0 bg-gray-700" style="height:5px">
-                                                                <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                                                            </div>
+                                                        <div class="col-md-6 mb-4 mb-md-0 text-white padding-left">
+                                                            <p class="h5 mb-0">Organizational Skills</p>
+                                                            <p>Attending the University, I learned to develop projects of large dimensions in collaboration with my
+                                                                colleagues. I learned to merge both my solutions and that proposed by my team into a single optimal idea.
+                                                                Sometimes I also took on the role of project manager: I managed deadlines and collective resources and I learned to hire
+                                                                all the responsibilities that were entrusted to me, leading all projects to success.
+                                                            </p>
                                                         </div>
                                                     </div>
 
-                                                    <div class="fw-divider-space" style="padding-top: 40px;"></div>
+                                                    <div class="fw-divider-space" style="padding-top: 40px;" id="Hobby"></div>
 
                                                     <div class="block-title">
-                                                        <h2>Experience</h2>
-                                                    </div>
-
-                                                    <!-- Inserire le esperienze
-                                                    <div class="row">
-                                                        <div class="col-lg-4 mb-5 mb-lg-0 text-white">
-                                                            <p class="h5 mb-0">2015 - 2020</p>
-                                                            <p class="small text-gray-400">Marketing Manager, West House Productions</p>
-                                                            <p>Brief description of the position and the responsibilities you had in this post. Fusce massa dolor, mattis sed ultrices ut.</p>
-                                                        </div>
-
-                                                        <div class="col-lg-4 mb-5 mb-lg-0 text-white">
-                                                            <p class="h5 mb-0">2012 - 2015</p>
-                                                            <p class="small text-gray-400">Marketing Consultant, Jump High Marketing</p>
-                                                            <p>Brief description of the position and the responsibilities you had in this post. Fusce massa dolor, mattis sed ultrices ut.</p>
-                                                        </div>
-
-                                                        <div class="col-lg-4 text-white">
-                                                            <p class="h5 mb-0">2007 - 2011</p>
-                                                            <p class="small text-gray-400">Product Manager, Trident Prototyping Studios</p>
-                                                            <p>Brief description of the position and the responsibilities you had in this post. Fusce massa dolor, mattis sed ultrices ut.</p>
-                                                        </div>
-                                                    </div>-->
-
-                                                    <div class="fw-divider-space" style="padding-top: 40px;"></div>
-
-                                                    <div class="block-title">
-                                                        <h2>Education</h2>
+                                                        <h2>Hobby and Interests</h2>
                                                     </div>
 
                                                     <div class="row">
-                                                        <div class="col-lg-4 mb-5 mb-lg-0 text-white">
-                                                            <p class="h5 mb-0">2014 - 2019</p>
-                                                            <p class="small text-gray-400">Scientific High School</p>
-                                                            <p>I'm graduated in Scientific High School with 87 as final grade.</p>
+                                                        <div class=" col-xs-12 col-sm-6 ">
+                                                            <div  class="fw-col-inner" data-paddings="0px 0px 0px 0px">
+                                                                <div class="info-list-w-icon">
+                                                                    <div class="info-block-w-icon">
+                                                                        <div class="ci-icon">
+                                                                            <i class="fa-solid fa-person-swimming"></i>
+                                                                        </div>
+                                                                        <div class="ci-text">
+                                                                            <h4>Sport</h4>
+                                                                            <p>I like sports a lot and I am very competitive. I have been swimming since the age of 5 and have participated in numerous competitions
+                                                                                carried out in various regions of Italy, winning the podium many times.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="info-block-w-icon">
+                                                                        <div class="ci-icon">
+                                                                            <i class="fa-solid fa-map-location-dot"></i>
+                                                                        </div>
+                                                                        <div class="ci-text">
+                                                                            <h4>Travel</h4>
+                                                                            <p>I love travelling in the world, in particular, to visit naturalistic places. I visited some regions of Italy
+                                                                                and other in Europe some Barcellona. I like changes and rationalize with other people.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
 
-                                                        <div class="col-lg-4 mb-5 mb-lg-0 text-white">
-                                                            <p class="h5 mb-0">2019 - 2022</p>
-                                                            <p class="small text-gray-400">Computer Science Degree</p>
-                                                            <p>Brief description of the position and the responsibilities you had in this post. Fusce massa dolor, mattis sed ultrices ut.</p>
+                                                        <div class=" col-xs-12 col-sm-6 ">
+                                                            <div  class="fw-col-inner" data-paddings="0px 0px 0px 0px">
+                                                                <div class="info-list-w-icon">
+                                                                    <div class="info-block-w-icon">
+                                                                        <div class="ci-icon">
+                                                                            <i class="fa-solid fa-code"></i>
+                                                                        </div>
+                                                                        <div class="ci-text">
+                                                                            <h4>Problem Solving</h4>
+                                                                            <p>I like to challenge myself and improve my skills, especially IT. I like to participate in different problems solving competitions especially coding challenges
+                                                                                organized by Google and solve the various CTF  online. I am a determined and curious person, then I like to practice what I learn.
+                                                                            </p>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
-
-                                                    <div class="fw-divider-space" style="padding-top: 40px;"></div>
                                                 </div>
                                             </div>
                                         </div>
+
+                                        <div class="fw-divider-space" style="padding-top: 40px;" id="Fun_Facts"></div>
 
                                         <div class="row">
                                             <div class=" col-xs-12 col-sm-12 ">
@@ -359,15 +361,12 @@
                     </li>
                 </ul>
             </div>
-
             <div class="footer-copyrights">
                 <p>© 2022 All rights reserved.</p>
             </div>
         </footer>
     </div>
 </div>
-<script type="text/javascript" src="https://lmpixels.com/wp/leven-wp/dark/wp-content/mmr/ce02913e-1619086408.min.js" id="js-2-js"></script>
-
-<div id="page-ajax-loaded" class="page-portfolio-loaded animated fadeInLeft" style="display: none"><div class="preloader-portfolio"><div class="preloader-animation"><div class="preloader-spinner"></div></div></div></div>
+<script src="lib/dark/js/modernizr.js"></script>
 </body>
 </html>

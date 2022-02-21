@@ -18,3 +18,21 @@
 .chip{
     filter: invert(32%) sepia(33%) saturate(5528%) hue-rotate(194deg) brightness(97%) contrast(102%);
 }
+
+.home-text h1{
+    font-size: 47px !important;
+}
+
+.padding-right{
+    padding-right: 30px !important;
+}
+
+.padding-left{
+    padding-left: 28px!important;
+}
+
+@media screen and (max-width: 768px){
+    .padding-left{
+        padding-left: 15px!important;
+    }
+}
