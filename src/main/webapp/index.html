@@ -4,24 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Portfolio">
-    <!--<link rel="icon" type="image/png" href="/icons/logo.png">-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone-no">
     <meta name="apple-mobile-web-app-title" content="Alberto Montefusco | Computer Science Student">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <!--<link rel="apple-touch-icon" href="${pageContext.request.contextPath}/icons/logo.png">
-    <link rel="apple-touch-startup-image" href="${pageContext.request.contextPath}/icons/logo.png">-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/favicon-16x16.png">
+
     <title>Alberto Montefusco | Computer Science Student</title>
 
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/library.css">
     <link rel="stylesheet" href="lib/dark/css/dark.css">
     <link rel="stylesheet" href="lib/dark/css/font.css">
     <link rel="stylesheet" href="lib/fontawesome/css/all.css">
 
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/jquey/jquery.js"></script>
-    <script src="lib/dark/js/dark.js"></script>
+    <!--<script src="lib/dark/js/dark.js"></script>-->
     <script src="lib/animejs/animejs.js"></script>
     <script src="js/text-change.js"></script>
     <script src="js/header.js"></script>
@@ -39,9 +42,9 @@
 <!-- /Loading animation -->
 
 <!-- Scroll To Top Button -->
-<div class="lmpixels-scroll-to-top hidden-btn">
-    <i class="lnr lnr-chevron-up"></i>
-</div>
+<a id="scrollUp" class="one" href="javascript:void(0)">
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
 <!-- /Scroll To Top Button -->
 
 <div class="page-scroll">
@@ -54,8 +57,11 @@
                 <!-- Text Logo -->
                 <div class="text-logo">
                     <a href="index.html">
-                        <div class="logo-symbol">A</div><!--Logo-->
-                        <div class="logo-text">Alberto <span>Montefusco</span></div>
+
+                        <div class="logo-text">
+                            <img src="icons/logo.svg" style="width: 50px;" alt="logo">
+                            Alberto
+                            <span>Montefusco</span></div>
                     </a>
                 </div>
                 <!-- /Text Logo -->
@@ -365,6 +371,5 @@
         </footer>
     </div>
 </div>
-<script src="lib/dark/js/modernizr.js"></script>
 </body>
 </html>
