@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="Portfolio">
-    <!--<link rel="icon" type="image/png" href="/icons/logo.png">-->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone-no">
     <meta name="apple-mobile-web-app-title" content="Alberto Montefusco | Computer Science Student">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <!--<link rel="apple-touch-icon" href="${pageContext.request.contextPath}/icons/logo.png">
-    <link rel="apple-touch-startup-image" href="${pageContext.request.contextPath}/icons/logo.png">-->
+
+    <link rel="apple-touch-icon" sizes="180x180" href="../../icons/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../icons/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../icons/favicon/favicon-16x16.png">
+
     <title>Alberto Montefusco | Computer Science Student</title>
 
     <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/reset.css">
     <link rel="stylesheet" href="../../css/library.css">
     <link rel="stylesheet" href="../../lib/dark/css/dark.css">
     <link rel="stylesheet" href="../../lib/dark/css/font.css">
     <link rel="stylesheet" href="../../lib/fontawesome/css/all.css">
 
     <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../../lib/jquey/jquery.js"></script>
-    <script src="../../lib/dark/js/dark.js"></script>
-    <script src="../../lib/animejs/animejs.js"></script>
-    <script src="../../js/text-change.js"></script>
+    <script src="../../lib/jquery/jquery.js"></script>
     <script src="../../js/header.js"></script>
 </head>
 <body >
@@ -40,7 +40,9 @@
 <!-- /Loading animation -->
 
 <!-- Scroll To Top Button -->
-<div class="lmpixels-scroll-to-top hidden-btn"><i class="lnr lnr-chevron-up"></i></div>
+<a id="scrollUp" class="one" href="javascript:void(0)">
+    <i class="fa-solid fa-chevron-up"></i>
+</a>
 <!-- /Scroll To Top Button -->
 
 <div class="page-scroll">
@@ -51,33 +53,32 @@
             <div class="header-content clearfix">
 
                 <!-- Text Logo -->
-                <a href="../../index.html">
-                    <div class="logo-symbol">A</div><!--Logo-->
-                    <div class="logo-text">Alberto <span>Montefusco</span></div>
-                </a>
+                <div class="text-logo">
+                    <a href="../../index.html">
+                        <div class="logo-text">
+                            <img src="../../icons/logo.svg" style="width: 50px;" alt="logo">
+                            Alberto <span>Montefusco</span>
+                        </div>
+                    </a>
+                </div>
                 <!-- /Text Logo -->
-
 
                 <!-- Navigation -->
                 <div class="site-nav mobile-menu-hide">
                     <ul id="menu-classic-menu" class="leven-classic-menu site-main-menu">
                         <li id="menu-item-160">
-                            <a href="../../index.html" data-hover="1">About Me <i class="arrow down"></i></a>
+                            <a href="../../index.html">About Me <i class="arrow down"></i></a>
                             <ul class="sub-menu">
-                                <li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="javascript:void(0)" data-hover="1">What I DO</a></li>
-                                <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="javascript:void(0)" data-hover="1">Skills</a></li>
-                                <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="javascript:void(0)" data-hover="1">Experience</a></li>
-                                <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="javascript:void(0)" data-hover="1">Education</a></li>
+                                <li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="../../index.html#what_I_Do" data-hover="1">What I DO</a></li>
+                                <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="../../index.html#Soft_Skills" data-hover="1">Soft Skills</a></li>
+                                <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="../../index.html#Hobby" data-hover="1">Hobby and Interests</a></li>
+                                <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../../index.html#Fun_Facts" data-hover="1">Fun Facts</a></li>
                             </ul>
                         </li>
-                        <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="javascript:void(0)" data-hover="1">Resume</a></li>
-                        <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191 current-menu-item"><a href="javascript:void(0)" data-hover="1">Contact</a></li>
+                        <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174"><a href="resume.html" data-hover="1">Resume</a></li>
+                        <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191 current-menu-item"><a href="contact.html" data-hover="1">Contact</a></li>
                     </ul>
                 </div>
-
-                <a class="menu-toggle mobile-visible">
-                    <i class="fa fa-bars"></i>
-                </a>
             </div>
         </header>
         <!-- /Header -->
@@ -191,11 +192,9 @@
                                                             <input type="submit" class="button btn-send disabled" value="Send message">
                                                         </div>
                                                     </form>
-
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
                                 </section>
                                 </div>
@@ -226,6 +225,5 @@
         </footer>
     </div>
 </div>
-<script src="../../lib/dark/js/modernizr.js"></script>
 </body>
 </html>
