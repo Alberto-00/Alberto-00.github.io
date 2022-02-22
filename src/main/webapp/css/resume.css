@@ -1,0 +1,51 @@
+.col_inner{
+    padding: 0 0 0 0;
+}
+
+.skill-95 .skill-percentage {
+    width: 95%;
+}
+
+.skill-95 > div.skill-percentage {
+    background-color: #007ced;
+}
+
+.skill-80 .skill-percentage {
+    width: 80%;
+}
+
+.skill-80 > div.skill-percentage {
+    background-color: #007ced;
+}
+
+.skill-85 .skill-percentage {
+    width: 85%;
+}
+
+.skill-85 > div.skill-percentage {
+    background-color: #007ced;
+}
+
+.skill-75 .skill-percentage {
+    width: 75%;
+}
+
+.skill-75 > div.skill-percentage {
+    background-color: #007ced;
+}
+
+.skill-90 .skill-percentage {
+    width: 90%;
+}
+
+.skill-90 > div.skill-percentage {
+    background-color: #007ced;
+}
+
+.skill-100 .skill-percentage {
+    width: 100%;
+}
+
+.skill-100 > div.skill-percentage {
+    background-color: #007ced;
+}
