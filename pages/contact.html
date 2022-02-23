@@ -25,6 +25,7 @@
     <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../lib/jquery/jquery.js"></script>
     <script src="../../js/header.js"></script>
+    <script src="../../js/contact.js"></script>
 </head>
 <body>
 
@@ -151,7 +152,7 @@
                                                     <div class="block-title">
                                                         <h2>How Can I Help You?</h2>
                                                     </div>
-                                                    <form id="contact_form_6212cd089c255" class="contact-form" action="../../contact/contact.php" method="POST" novalidate="true">
+                                                    <form id="contact_form_6212cd089c255" class="contact-form" action="https://formspree.io/f/xqknqjrq" method="POST" novalidate="true">
                                                         <div class="messages"></div>
                                                         <div class="controls two-columns">
                                                             <div class="fields clearfix">
@@ -180,7 +181,8 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <input type="submit" onclick="sendEmail()" name="submit" class="g-recaptcha button btn-send disabled" value="Send message">
+                                                            <input type="submit" name="submit" class="g-recaptcha button btn-send disabled" value="Send message">
+                                                            <p id="my-form-status"></p>
                                                         </div>
                                                     </form>
                                                 </div>
@@ -217,10 +219,5 @@
     </div>
 </div>
 <script src="../../js/validation.js"></script>
-<script type="text/javascript">
-        if(window.history.replaceState){
-        window.history.replaceState(null, null, window.location.href);
-    }
-</script>
 </body>
 </html>
