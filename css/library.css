@@ -1,3 +1,11 @@
+.mobile-menu-hide{
+    padding-top: 0!important;
+}
+
+.site-nav{
+    padding-top: 25px;
+}
+
 .text-logo {
     cursor: default;
 }

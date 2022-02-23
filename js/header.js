@@ -20,4 +20,9 @@ $(document).ready(function (){
     $("#scrollUp").click(function () {
         $("html, body").animate({scrollTop: 0}, 800);
     });
+
+    //sidenav
+    $('#menu-phone').click(function (){
+        $('#toggle').toggleClass("mobile-menu-hide");
+    })
 })
