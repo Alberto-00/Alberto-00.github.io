@@ -85,7 +85,7 @@
        y1="246.4472"
        x2="513.6875"
        y2="246.4472"
-       gradientTransform="matrix(2.0254295,0,0,2.0254295,-345.51531,-135.10649)" />
+       gradientTransform="matrix(2.0254295,0,0,2.0254295,-346.88533,-137.10649)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient1276"
@@ -108,7 +108,7 @@
      showgrid="false"
      inkscape:zoom="0.77686188"
      inkscape:cx="338.54152"
-     inkscape:cy="389.38711"
+     inkscape:cy="287.69593"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
@@ -124,13 +124,13 @@
       <text
          xml:space="preserve"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:295.33px;font-family:'Allerta Stencil';-inkscape-font-specification:'Allerta Stencil';mix-blend-mode:normal;fill:url(#linearGradient6920);fill-opacity:1;fill-rule:nonzero;stroke-width:24.6106"
-         x="262.91461"
-         y="441.54871"
+         x="261.54459"
+         y="439.54871"
          id="text298"><tspan
            sodipodi:role="line"
            id="tspan296"
-           x="262.91461"
-           y="441.54871"
+           x="261.54459"
+           y="439.54871"
            style="fill:url(#linearGradient6920);fill-opacity:1;fill-rule:nonzero;stroke-width:24.6106">A</tspan></text>
       <path
          id="path235"
