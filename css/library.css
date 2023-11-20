@@ -155,3 +155,19 @@
         pointer-events: none;
     }
 }
+
+a:visited.btn-primary, a:link.btn-primary, a:active.btn-primary,
+a:visited.btn-secondary, a:link.btn-secondary, a:active.btn-secondary {
+    background-color: #333333;
+    box-shadow: none;
+    color: #fff;
+}
+
+a:hover.btn-primary{
+    background-color: #007ced;
+}
+
+a:hover.btn-secondary{
+    color: #333333;
+    background-color: #d5d5d5;
+}
