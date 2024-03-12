@@ -171,3 +171,9 @@ a:hover.btn-secondary{
     color: #333333;
     background-color: #d5d5d5;
 }
+
+@media screen and (max-width: 746px){
+    .fw-divider-space {
+        padding-top: 0!important;
+    }
+}
