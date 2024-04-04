@@ -183,3 +183,7 @@ a:hover.btn-secondary{
     padding-top: 13px;
     padding-bottom: 13px;
 }
+
+body{
+    background-image:url(../icons/main_bg_14.png);
+}
