@@ -23,10 +23,6 @@
     -webkit-transform: rotate(45deg);
 }
 
-.chip{
-    filter: invert(32%) sepia(33%) saturate(5528%) hue-rotate(194deg) brightness(97%) contrast(102%);
-}
-
 .home-text h1{
     font-size: 47px !important;
 }
@@ -176,4 +172,14 @@ a:hover.btn-secondary{
     .fw-divider-space {
         padding-top: 0!important;
     }
+}
+
+.footer-social-links > li {
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.footer-copyrights{
+    padding-top: 13px;
+    padding-bottom: 13px;
 }

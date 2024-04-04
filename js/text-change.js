@@ -1,6 +1,6 @@
 $(document).ready(function (){
 
-    var text = ["CyberSecurity Addicted", "AI Addicted", "Computer Science Student"];
+    var text = ["Internet Of Things Addicted", "AI Addicted", "CyberSecurity Student"];
     var counter = 0;
     firstChange($('.txt-eff1'));
     var inst = setInterval(change, 3950);
