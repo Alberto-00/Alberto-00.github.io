@@ -7,8 +7,8 @@
    width="705.42871"
    height="711.95959"
    viewBox="0 0 705.42871 711.95959"
-   sodipodi:docname="logo.svg"
-   inkscape:version="1.2.1 (9c6d41e, 2022-07-14)"
+   sodipodi:docname="logo_dark.svg"
+   inkscape:version="1.3 (0e150ed, 2023-07-21)"
    xml:space="preserve"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -21,7 +21,7 @@
          style="stop-color:#f44327;stop-opacity:1;"
          offset="0"
          id="stop1" /><stop
-         style="stop-color:#000000;stop-opacity:1;"
+         style="stop-color:#300000;stop-opacity:1;"
          offset="1"
          id="stop2" /></linearGradient><linearGradient
        inkscape:collect="always"
@@ -29,7 +29,7 @@
          style="stop-color:#f44327;stop-opacity:0.98823529;"
          offset="0"
          id="stop1272" /><stop
-         style="stop-color:#000000;stop-opacity:1;"
+         style="stop-color:#300000;stop-opacity:1;"
          offset="1"
          id="stop1274" /></linearGradient><clipPath
        clipPathUnits="userSpaceOnUse"
@@ -64,12 +64,12 @@
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
      inkscape:zoom="0.77686188"
-     inkscape:cx="338.54152"
-     inkscape:cy="287.69593"
+     inkscape:cx="339.18513"
+     inkscape:cy="288.33954"
      inkscape:window-width="1920"
      inkscape:window-height="1016"
      inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="g223" /><g
      inkscape:groupmode="layer"
