@@ -1,0 +1,93 @@
+.btn-primary:hover, .btn-primary:focus, button:focus,
+input[type="button"]:hover, input[type="button"]:focus,
+input[type="submit"]:hover, input[type="submit"]:focus,
+.skill-percentage, .service-icon, .lm-pricing .lm-package-wrap.highlight-col .lm-heading-row span::after,
+.portfolio-page-nav > div.nav-item a:hover, .testimonials.owl-carousel .owl-nav .owl-prev:hover,
+.testimonials.owl-carousel .owl-nav .owl-next:hover, .clients.owl-carousel .owl-nav .owl-prev:hover,
+.clients.owl-carousel .owl-nav .owl-next:hover, .lm-content-slider.owl-carousel .owl-nav .owl-prev:hover,
+.lm-content-slider.owl-carousel .owl-nav .owl-next:hover, .fw-pricing .fw-package-wrap.highlight-col .fw-heading-row span::after,
+.cat-links li a, .cat-links li a:hover, .calendar_wrap td#today, .nothing-found p, .blog-sidebar .sidebar-title h4::after,
+.block-title h2::after, h3.comment-reply-title::after, .portfolio-grid figure .portfolio-preview-desc h5::after,
+.preloader-spinner, .info-list li .title::after, .header .social-links a:hover, .clients.owl-carousel .owl-dot.active span,
+.clients.owl-carousel .owl-dot:hover span, .testimonials.owl-carousel .owl-dot.active span, .testimonials.owl-carousel .owl-dot:hover span,
+.lm-content-slider.owl-carousel .owl-dot.active span, .lm-content-slider.owl-carousel .owl-dot:hover span, .logo-symbol {
+    background-color: #a6192e!important;
+}
+
+button:hover, input[type="submit"]:hover, input[type="submit"] {
+    border-color: #a6192e!important;
+}
+
+.timeline-item h5.item-period{
+    border-color: #a6192e!important;
+}
+
+#scrollUp:hover{
+    color:#a6192e!important;
+}
+
+.ci-icon > i{
+    color: #a6192e!important;
+}
+
+/**************/
+/* Switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch .checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: transparent;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: 1px 1px 5px 0 #d84f68 inset;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: #d84f68;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    box-shadow: inset 1px 1px 2px 0px #ff7ca7;
+}
+
+.checkbox:checked + .slider {
+    box-shadow: 1px 1px 5px 0 #007ced inset;
+}
+
+.checkbox:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    background-color: #007ced;
+    box-shadow: inset -1px 1px 2px 0px #33ccffff;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

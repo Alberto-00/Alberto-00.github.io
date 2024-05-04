@@ -32,4 +32,29 @@ $(document).ready(function (){
         if (!closeSidenav.hasClass("mobile-menu-hide"))
             closeSidenav.addClass("mobile-menu-hide")
     })
+
+    //switch
+    $('.switch').click(function() {
+        var currentPage = window.location.href;
+        var baseUrl = window.location.origin;
+        var safeUrls = {
+            '/hacker/index.html': baseUrl + '/index.html',
+            '/hacker/contact.html': baseUrl + '/contact.html',
+            '/hacker/resume.html': baseUrl + '/resume.html',
+            '/index.html': baseUrl + '/hacker/index.html',
+            '/contact.html': baseUrl + '/hacker/contact.html',
+            '/resume.html': baseUrl + '/hacker/resume.html'
+        };
+
+        // Cicla attraverso le chiavi dell'oggetto safeUrls
+        for (var key in safeUrls) {
+            if (currentPage.includes(key)) {
+                window.location.href = safeUrls[key];
+                return; // Interrompe l'esecuzione ulteriore del ciclo e della funzione
+            }
+        }
+
+        // Default reindirizzamento se nessun caso precedente corrisponde
+        window.location.href = baseUrl + '/index.html';
+    });
 })

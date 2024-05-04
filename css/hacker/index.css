@@ -1,0 +1,28 @@
+img.hacker-photo{
+    width: 80%;
+    margin-top: 20px;
+}
+
+.home-photo{
+    position: static;
+}
+
+a:hover.btn-primary{
+    background-color: #a6192e!important;
+}
+
+.btn-primary{
+    border-color: #a6192e!important;
+}
+
+h4 > a, b > a{
+    color: #951629!important;
+}
+
+h4 > a:hover, b > a:hover{
+    color: #741120!important;
+}
+
+.lm-info-block i{
+    color: #a6192e!important;
+}
