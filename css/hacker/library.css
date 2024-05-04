@@ -29,3 +29,11 @@ button:hover, input[type="submit"]:hover, input[type="submit"] {
 .ci-icon > i{
     color: #a6192e!important;
 }
+
+b > a{
+    color: #951629!important;
+}
+
+b > a:hover{
+    color: #741120!important;
+}
