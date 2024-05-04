@@ -43,7 +43,8 @@ $(document).ready(function (){
             '/hacker/resume.html': baseUrl + '/resume.html',
             '/index.html': baseUrl + '/hacker/index.html',
             '/contact.html': baseUrl + '/hacker/contact.html',
-            '/resume.html': baseUrl + '/hacker/resume.html'
+            '/resume.html': baseUrl + '/hacker/resume.html',
+            '/': baseUrl + '/hacker/index.html'
         };
 
         // Cicla attraverso le chiavi dell'oggetto safeUrls
