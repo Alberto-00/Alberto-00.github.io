@@ -32,6 +32,9 @@
     <script src="../lib/jquery/jquery.js"></script>
     <script src="../js/header.js"></script>
     <script src="../lib/dark/js/dark.js"></script>
+
+    <script src="../lib/chartjs/chart.js"></script>
+    <script src="../js/radar_chart_hacker.js"></script>
 </head>
 <body style="background-color: #a6192e;">
 
@@ -139,7 +142,7 @@
                                                             <span class="item-company">University</span>
                                                             <h4 class="item-title">Cybersecurity Master Degree</h4>
                                                             <div class="text">
-                                                                I hold a Master’s degree in Cybersecurity from the University of Salerno, graduating with top honors (<bf>110 cum laude</bf>).
+                                                                I hold a Master’s degree in Cybersecurity from the University of Salerno, graduating with top honors (<b>110 cum laude</b>).
                                                                 My thesis focused on the development and evaluation of an Intrusion Detection System (IDS) based on Siamese Neural Networks,
                                                                 implemented on a Microcontroller Unit (MCU). For this project, I created a realistic IoT attack dataset by simulating
                                                                 attacks on a smart home IoT architecture that I designed and built myself.
@@ -320,32 +323,6 @@
 
                                             <div class=" col-xs-12 col-sm-6 ">
                                                 <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-                                                    <a href="../documents/pergamena.jpg" class="lightbox">
-                                                        <div class="certificate-item clearfix">
-                                                            <div class="certi-logo">
-                                                                <img src="../icons/certificates/unisa.svg" alt="logo">
-                                                            </div>
-                                                            <div class="certi-content">
-                                                                <div class="certi-title">
-                                                                    <h4>Bachelor Degree</h4>
-                                                                </div>
-                                                                <div class="certi-id">
-                                                                    <span>Bachelor Degree in Computer Science at University of Study of Salerno (UNISA)</span>
-                                                                </div>
-                                                                <div class="certi-date">
-                                                                    <span>30 September 2022</span>
-                                                                </div>
-                                                                <div class="certi-company">
-                                                                    <span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
                                                     <a href="../documents/CyberChallenge.IT-2022.jpg" class="lightbox">
                                                         <div class="certificate-item clearfix">
                                                             <div class="certi-logo">
@@ -427,9 +404,17 @@
 
                                         <div id="Hard_Skills" class="fw-divider-space" style="padding-top: 40px;"></div>
 
+                                        <div class="block-title">
+                                            <h2>Cybersecurity Skills</h2>
+                                        </div>
+
+                                        <div style="height: 650px; padding: 35px">
+                                            <canvas id="certificationsRadarHacker"></canvas>
+                                        </div>
+
                                         <div class="row">
                                             <!--*** Cybersecurity skills ***-->
-                                            <div class=" col-xs-12 col-sm-6 ">
+                                            <!--<div class=" col-xs-12 col-sm-6 ">
                                                 <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
 
                                                     <div class="block-title">
@@ -488,11 +473,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             <!--*** End section ***-->
 
                                             <!--*** Blockchain skills ***-->
-                                            <div class=" col-xs-12 col-sm-6 ">
+                                            <!--<div class=" col-xs-12 col-sm-6 ">
                                                 <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
 
                                                     <div class="block-title">
@@ -551,13 +536,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             <!--*** End section ***-->
 
-                                            <div class="fw-divider-space" style="padding-top: 40px;"></div>
+                                            <!--<div class="fw-divider-space" style="padding-top: 40px;"></div>-->
 
                                             <!--*** IoT skills ***-->
-                                            <div class=" col-xs-12 col-sm-6 ">
+                                            <!--<div class=" col-xs-12 col-sm-6 ">
                                                 <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
 
                                                     <div class="block-title">
@@ -606,11 +591,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             <!--*** End section ***-->
 
                                             <!--*** Cryptography skills ***-->
-                                            <div class=" col-xs-12 col-sm-6 ">
+                                            <!--<div class=" col-xs-12 col-sm-6 ">
                                                 <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
 
                                                     <div class="block-title">
@@ -659,13 +644,13 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             <!--*** End section ***-->
 
-                                            <div class="fw-divider-space" style="padding-top: 40px;"></div>
+                                            <!--<div class="fw-divider-space" style="padding-top: 40px;"></div>-->
 
                                             <!--*** Coding skills ***-->
-                                            <div class=" col-xs-12 col-sm-6 ">
+                                            <!--<div class=" col-xs-12 col-sm-6 ">
                                                 <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
 
                                                     <div class="block-title">
@@ -730,11 +715,11 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             <!--*** End section ***-->
 
                                             <!--*** Other skills ***-->
-                                            <div class=" col-xs-12 col-sm-6 ">
+                                            <!--<div class=" col-xs-12 col-sm-6 ">
                                                 <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
 
                                                     <div class="block-title">
@@ -783,7 +768,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div>-->
                                             <!--*** End section ***-->
 
                                             <div class="fw-divider-space" style="padding-top: 40px;"></div>
