@@ -49,3 +49,9 @@
 .skill-100 > div.skill-percentage {
     background-color: #007ced;
 }
+
+@media screen and (min-width: 991px){
+    .chart-responsive{
+        height: 500px;
+    }
+}

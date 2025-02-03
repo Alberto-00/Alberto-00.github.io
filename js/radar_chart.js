@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 pointLabels: {
                     color: 'rgba(213, 213, 213, 0.8)', // Colore delle etichette sui punti
                     font: {
-                        size: 14 // Dimensione del font delle etichette sui punti
+                        size: 12 // Dimensione del font delle etichette sui punti
                     }
                 },
                 ticks: {
