@@ -1,6 +1,6 @@
 $(document).ready(function (){
 
-    var text = ["Internet Of Things Addicted", "Offensive Security Addicted", "MSc in CyberSecurity"];
+    var text = ["Internet Of Things Addicted", "Offensive Security Addicted", "Penetration Tester"];
     var counter = 0;
     firstChange($('.txt-eff1'));
     var inst = setInterval(change, 3950);
