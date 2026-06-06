@@ -1,797 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone-no">
-    <meta name="apple-mobile-web-app-title" content="Alberto Montefusco | Computer Science Student">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/blue_team/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/blue_team/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/blue_team/favicon-16x16.png">
-    <link rel="manifest" href="icons/favicon/blue_team/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#222">
-    <meta name="theme-color" content="#222">
-
-    <title>Alberto Montefusco | Computer Science Student</title>
-
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/library.css">
-    <link rel="stylesheet" href="css/resume.css">
-    <link rel="stylesheet" href="lib/dark/css/dark_resume.css">
-    <link rel="stylesheet" href="lib/dark/css/font.css">
-    <link rel="stylesheet" href="lib/fontawesome/css/all.css">
-
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/jquery/jquery.js"></script>
-    <script src="js/header.js"></script>
-    <script src="lib/dark/js/dark.js"></script>
-
-    <script src="lib/chartjs/chart.js"></script>
-    <script src="js/radar_chart.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){var t='defense';try{t=localStorage.getItem('am_theme')||'defense';}catch(e){}var d=document.documentElement;d.setAttribute('data-theme',t);d.style.backgroundColor='#0b0e14';})();</script>
+<title>Alberto Montefusco — Resume</title>
+<meta name="description" content="Resume of Alberto Montefusco — MSc Cybersecurity (110 cum laude), Red Team Penetration Tester. Education, experience, scientific publications and certifications (eCPPT, HTB CPTS, Rapid7 InsightVM).">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alberto Montefusco">
+<meta property="og:url" content="https://alberto-00.github.io/resume.html">
+<link rel="canonical" href="https://alberto-00.github.io/resume.html">
+<meta property="og:title" content="Alberto Montefusco — Resume">
+<meta property="og:description" content="MSc Cybersecurity (110 cum laude) · Red Team Penetration Tester. Education, experience, publications and certifications.">
+<meta property="og:image" content="https://alberto-00.github.io/icons/og-logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alberto Montefusco — Resume">
+<meta name="twitter:description" content="MSc Cybersecurity · Red Team Penetration Tester. Education, experience, publications and certifications.">
+<meta name="twitter:image" content="https://alberto-00.github.io/icons/og-logo.png">
+<meta name="theme-color" content="#0b0e14">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="shortcut icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
 </head>
 <body>
 
-<!--<div class="lm-animated-bg" style="background-position: calc(50% + 2.1026px) calc(50% + 2.2763px);"></div>-->
+<div class="bg-grid"></div>
+<canvas id="rain"></canvas>
+<div class="vignette"></div>
+<div class="scanlines"></div>
 
-<!-- Loading animation -->
-<div class="preloader" style="display: none;">
-    <div class="preloader-animation">
-        <div class="preloader-spinner">
-        </div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html"><img class="brand-logo blue" src="icons/logo-blue.png" alt="AM logo"><img class="brand-logo red" src="icons/logo-red.png" alt="">alberto<b>@</b>montefusco<span class="cur">_</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li class="nav-item has-drop">
+          <a href="index.html" class="np">./about</a>
+          <ul class="dropdown">
+            <li><a href="index.html#what">What I Do</a></li>
+            <li><a href="index.html#skills">Soft Skills</a></li>
+            <li><a href="index.html#hobby">Hobby &amp; Interests</a></li>
+            <li><a href="index.html#facts">Fun Facts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-drop">
+          <a href="resume.html" class="np active">./resume</a>
+          <ul class="dropdown">
+            <li><a href="resume.html#Education">Education</a></li>
+            <li><a href="resume.html#Experience">Experience</a></li>
+            <li><a href="resume.html#Publications">Publications</a></li>
+            <li><a href="resume.html#Certificates">Certificates</a></li>
+            <li><a href="resume.html#Hard_Skills">Skills Radar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-drop">
+          <a href="contact.html" class="np">./contact</a>
+          <ul class="dropdown">
+            <li><a href="contact.html#find">Find Me</a></li>
+            <li><a href="contact.html#message">Send Message</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="documents/CV_Alberto_Montefusco.pdf" target="_blank" class="np">cv.pdf</a></li>
+      </ul>
+      <span class="sw-label">mode</span>
+      <div class="theme-switch" role="group" aria-label="Theme mode">
+        <button data-theme-btn="defense"><i class="fa-solid fa-shield-halved"></i><span class="lbl">DEFENSE</span></button>
+        <button data-theme-btn="hacker"><i class="fa-solid fa-skull"></i><span class="lbl">HACKER</span></button>
+      </div>
+      <button class="nav-toggle" aria-label="menu"><i class="fa-solid fa-terminal"></i></button>
     </div>
-</div>
-<!-- /Loading animation -->
-
-<!-- Scroll To Top Button -->
-<a id="scrollUp" class="one" href="javascript:void(0)">
-    <i class="fa-solid fa-chevron-up"></i>
-</a>
-<!-- /Scroll To Top Button -->
-
-<div class="page-scroll">
-    <div id="page_container" class="page-container bg-move-effect theme-style-dark animated transition-flip-in-right" data-animation="transition-flip-in-right">
-
-        <!-- Header -->
-        <header id="site_header" class="header">
-            <div class="header-content clearfix">
-
-                <!-- Text Logo -->
-                <div class="text-logo">
-                    <a href="index.html">
-                        <div class="logo-text">
-                            <img src="icons/logo.svg" style="width: 60px; vertical-align: middle;" alt="logo">
-                            Alberto <span>Montefusco</span>
-                        </div>
-                    </a>
-                </div>
-                <!-- /Text Logo -->
-
-                <!-- Navigation -->
-                <div id="toggle" class="site-nav animate mobile-menu-hide">
-                    <ul id="menu-classic-menu" class="leven-classic-menu site-main-menu">
-                        <li id="menu-item-160">
-                            <a href="index.html">About Me <i class="arrow down"></i></a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="index.html#what_I_Do" data-hover="1">What I DO</a></li>
-                                <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="index.html#Soft_Skills" data-hover="1">Soft Skills</a></li>
-                                <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="index.html#Hobby" data-hover="1">Hobby and Interests</a></li>
-                                <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="index.html#Fun_Facts" data-hover="1">Fun Facts</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174 current-menu-item">
-                            <a href="resume.html" data-hover="1">Resume <i class="arrow down"></i></a>
-                            <ul class="sub-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="#Education" data-hover="1">Education</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="#Experience" data-hover="1">Experience</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="#Certificates" data-hover="1">Certificates</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="#Hard_Skills" data-hover="1">Hard Skills</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="contact.html" data-hover="1">Contact</a></li>
-                        <li>
-                            <label class="switch">
-                                <input class="checkbox" type="checkbox" />
-                                <span class="slider round"></span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-                <a id="menu-phone" class="menu-toggle mobile-visible">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </header>
-        <!-- /Header -->
-
-        <div id="main" class="site-main">
-            <div id="main-content" class="single-page-content">
-                <div id="primary" class="content-area">
-                    <div class="page-title">
-                        <h1>Resume</h1>
-                        <div class="page-subtitle">
-                            <h4> 0 - 1 Years of Experience</h4>
-                        </div>
-                    </div>
-
-                    <div id="Education"></div>
-                    <div id="Experience"></div>
-
-                    <div id="content" class="page-content site-content single-post" role="main">
-                        <article id="post-171" class="post-171 page type-page status-publish hentry">
-                            <div class="entry-content">
-                                <div class="fw-page-builder-content"><section class="fw-main-row ">
-                                    <div class="fw-container">
-                                        <div class="row">
-                                            <div class=" col-xs-12 col-sm-6">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>Education</h2>
-                                                    </div>
-
-                                                    <div id="timeline-6212cd2724faa" class="timeline clearfix">
-                                                        <div class="timeline-item clearfix">
-                                                            <h5 class="item-period ">2022 - 2024</h5>
-                                                            <span class="item-company">University</span>
-                                                            <h4 class="item-title">Cybersecurity Master Degree</h4>
-                                                            <div class="text">
-                                                                I hold a Master’s degree in Cybersecurity from the University of Salerno, graduating with top honors (<b>110 cum laude</b>).
-                                                                My thesis focused on the development and evaluation of an <b><a href="documents/Tesi_magistrale.pdf" target="_blank">Intrusion Detection System</a></b> (IDS) based on Siamese Neural Networks,
-                                                                implemented on a Microcontroller Unit (MCU). For this project, I created a realistic IoT attack dataset by simulating
-                                                                attacks on a smart home IoT architecture that I designed and built myself.
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-item clearfix">
-                                                            <h5 class="item-period ">2019 - 2022</h5>
-                                                            <span class="item-company">University</span>
-                                                            <h4 class="item-title">Computer Science Degree</h4>
-                                                            <div class="text">
-                                                                I am graduated in Computer Science at University of Salerno with <b>110 cum Laude</b>. My Bachelor degree thesis in Computer Science
-                                                                consisted in development an authentication system through <b><a href="documents/Tesi.pdf" target="_blank">Ethereum Blockchain</a></b>. I developed the Web DApp
-                                                                <i>KryptoAuth</i> that allows any user to register and wait for an administrator gives him the permissions
-                                                                of "User" or "Admin" to carry out the operation of Login.
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-item clearfix">
-                                                            <h5 class="item-period ">2014 - 2019</h5>
-                                                            <span class="item-company">High School</span>
-                                                            <h4 class="item-title">Scientific High School Degree</h4>
-                                                            <div class="text">
-                                                                I graduated Scientific High School Bonaventura Rescigno at Roccampiemonte, Campania (Italy).
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class=" col-xs-12 col-sm-6">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>Experience</h2>
-                                                    </div>
-                                                    <div class="timeline clearfix">
-                                                        <div class="timeline-item clearfix">
-                                                            <h5 class="item-period current">2025 - Current</h5>
-                                                            <span class="item-company">DGS S.p.A</span>
-                                                            <h4 class="item-title">Red Team Penetration Tester</h4>
-                                                            <div class="text">
-                                                                I currently hold the position of Red Team Penetration Tester at <b><a href="https://www.dgsspa.com/" target="_blank">DGS S.p.A</a></b>,
-                                                                where I am responsible for conducting advanced penetration tests to identify and mitigate vulnerabilities in IT/OT systems.
-                                                                Since joining the company in April 2025, my work is based on thorough analysis and a constant commitment to staying updated, aimed at ensuring
-                                                                the security and resilience of IT/OT infrastructures against increasingly sophisticated threats.
-                                                            </div>
-                                                        </div>
-                                                        <div class="timeline-item clearfix">
-                                                            <h5 class="item-period current">2016 - 2019</h5>
-                                                            <span class="item-company">Maryland</span>
-                                                            <h4 class="item-title">Kid's Entertainer</h4>
-                                                            <div class="text">
-                                                                When I am 16 years old, I started Kid's Entertainer career starting to relate to other old
-                                                                people and starting to take on all the responsibilities that were entrusted to me.
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class=" col-xs-12 col-sm-12 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div id="Certificates" class="fw-divider-space" style="padding-top: 20px;"></div>
-
-                                                    <div class="block-title">
-                                                        <h2>Certificates</h2>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-                                                    <a href="documents/Certificate_OR11E44F-1.png" class="lightbox">
-                                                        <div class="certificate-item clearfix">
-                                                            <div class="certi-logo">
-                                                                <img src="icons/certificates/cisco-networking-accademy.png" alt="logo">
-                                                            </div>
-                                                            <div class="certi-content">
-                                                                <div class="certi-title">
-                                                                    <h4>Cybersecurity Scholarship</h4>
-                                                                </div>
-                                                                <div class="certi-id">
-                                                                    <span>Certificate of Course Completion for <b>Cybersecurity Scholarship 2024</b></span>
-                                                                </div>
-                                                                <div class="certi-date">
-                                                                    <span>24 April 2024</span>
-                                                                </div>
-                                                                <div class="certi-company">
-                                                                    <span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-                                                    <a href="documents/Ethical_Hacker_Badge.png" class="lightbox">
-                                                        <div class="certificate-item clearfix">
-                                                            <div class="certi-logo">
-                                                                <img src="icons/certificates/ethical-hacker.png" alt="logo">
-                                                            </div>
-                                                            <div class="certi-content">
-                                                                <div class="certi-title">
-                                                                    <h4>CISCO Ethical Hacker</h4>
-                                                                </div>
-                                                                <div class="certi-id">
-                                                                    <span>Certificate of Course Completion for <b>Ethical Hacker</b></span>
-                                                                </div>
-                                                                <div class="certi-date">
-                                                                    <span>03 April 2024</span>
-                                                                </div>
-                                                                <div class="certi-company">
-                                                                    <span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-                                                    <a href="documents/Networking_Basics_Badge.png" class="lightbox">
-                                                        <div class="certificate-item clearfix">
-                                                            <div class="certi-logo">
-                                                                <img src="icons/certificates/networking-basics.png" alt="logo">
-                                                            </div>
-                                                            <div class="certi-content">
-                                                                <div class="certi-title">
-                                                                    <h4>CISCO Networking Basics</h4>
-                                                                </div>
-                                                                <div class="certi-id">
-                                                                    <span>Certificate of Course Completion for <b>Networking Basics</b></span>
-                                                                </div>
-                                                                <div class="certi-date">
-                                                                    <span>03 April 2024</span>
-                                                                </div>
-                                                                <div class="certi-company">
-                                                                    <span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-                                                    <a href="documents/Introduction_to_Cybersecurity_Badge-Cisco.png" class="lightbox">
-                                                        <div class="certificate-item clearfix">
-                                                            <div class="certi-logo">
-                                                                <img src="icons/certificates/cisco-certificate-logo.png" alt="logo">
-                                                            </div>
-                                                            <div class="certi-content">
-                                                                <div class="certi-title">
-                                                                    <h4>CISCO Cybersecurity</h4>
-                                                                </div>
-                                                                <div class="certi-id">
-                                                                    <span>Certificate of Course Completion for <b>Introduction to Cybersecurity</b></span>
-                                                                </div>
-                                                                <div class="certi-date">
-                                                                    <span>26 November 2023</span>
-                                                                </div>
-                                                                <div class="certi-company">
-                                                                    <span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-
-                                            <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-                                                    <a href="documents/CyberChallenge.IT-2022.jpg" class="lightbox">
-                                                        <div class="certificate-item clearfix">
-                                                            <div class="certi-logo">
-                                                                <img src="icons/certificates/cyberChallenge.svg" alt="logo">
-                                                            </div>
-                                                            <div class="certi-content">
-                                                                <div class="certi-title">
-                                                                    <h4>CyberChallenge.it 2022 Certificate</h4>
-                                                                </div>
-                                                                <div class="certi-id">
-                                                                    <span>Project organized by National CINI CyberSecurity Lab</span>
-                                                                </div>
-                                                                <div class="certi-date">
-                                                                    <span>1 June 2022</span>
-                                                                </div>
-                                                                <div class="certi-company">
-                                                                    <span></span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div id="Hard_Skills" class="fw-divider-space" style="padding-top: 40px;"></div>
-
-                                        <div class="block-title">
-                                            <h2>Cybersecurity Skills</h2>
-                                        </div>
-
-                                        <div class="chart-responsive">
-                                            <canvas id="certificationsRadar"></canvas>
-                                        </div>
-
-                                        <div class="row">
-                                            <!--*** Cybersecurity skills ***-->
-                                            <!--
-                                            <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>CyberSecurity</h2>
-                                                    </div>
-
-                                                    <div class="skills-info skills-first-style">
-                                                        <div class="clearfix">
-                                                            <h4>Network analysis (Tcpdump, Wireshark)</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Firewalls and Next-Generation Firewalls management</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Network attacks: Network Mapping & Scanning, DDoS attacks, Hijacking</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Strategies and Tools for Network Defense:
-                                                                SinkHoling and BlackHoling, Traffic Detection
-                                                            </h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Anonymity practices: the Onion Routing structure (Tor, FreeNet), VPN</h4>
-                                                            <div class="skill-value">85%</div>
-                                                        </div>
-                                                        <div data-value="85" data-color="#007ced" class="skill-container skill-85">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Exploit websites: buffer overflow, SQL Injection, XSS</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>-->
-                                            <!--*** End section ***-->
-
-                                            <!--*** Blockchain skills ***-->
-                                            <!-- <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>Blockchain Security</h2>
-                                                    </div>
-
-                                                    <div class="skills-info skills-first-style">
-                                                        <div class="clearfix">
-                                                            <h4>Web3 and Web3.0 structure</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Blockchain learned: Ethereum, Cardano, Hyperledger Fabric</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Consensus Algorithms: PoS, PoW, DPoS, PBFT,<br>
-                                                                Nakamoto, Tendermint, Ouroboros Praos
-                                                            </h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Smart Contract / Chaincode Security (Attack & Defense)</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Crypto Wallet (MetaMask)</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Truffle Suite - OpenZeppelin Framework</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="85" data-color="#007ced" class="skill-container skill-85">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>-->
-                                            <!--*** End section ***-->
-
-                                            <!-- <div class="fw-divider-space" style="padding-top: 40px;"></div> -->
-
-                                            <!--*** IoT skills ***-->
-                                            <!-- <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>IoT Security</h2>
-                                                    </div>
-
-                                                    <div class="skills-info skills-first-style">
-                                                        <div class="clearfix">
-                                                            <h4>Exploit Serial Communication (SPI, I2C, UART)</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Hacking, Emulation and Backdooring Firmware</h4>
-                                                            <div class="skill-value">80%</div>
-                                                        </div>
-                                                        <div data-value="80" data-color="#007ced" class="skill-container skill-80">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>IoT attacks: Side Channel, Brute Forse, Fault Injection, Jamming, ...</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Physical Unclonable Functions (PUF)</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Lightweight cryptography</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>-->
-                                            <!--*** End section ***-->
-
-                                            <!--*** Cryptography skills ***-->
-                                            <!--<div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>Cryptography</h2>
-                                                    </div>
-
-                                                    <div class="skills-info skills-first-style">
-                                                        <div class="clearfix">
-                                                            <h4>Symmetric encryption: DES, AES, OTP, ...</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Asymmetric encryption: RSA, Diffie-Hellman, ECC</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Hashing algorithms: MD5, SHA family</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Cryptography Primitives: MAC, HMAC, Hashing, Digital Signature</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Security Protocols: SSL, TLS, DTLS, IPSec, HTTPS, Kerberos, WEP, WPA-2</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>-->
-                                            <!--*** End section ***-->
-
-                                           <!-- <div class="fw-divider-space" style="padding-top: 40px;"></div>-->
-
-                                            <!--*** Coding skills ***-->
-                                            <!--<div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>Coding</h2>
-                                                    </div>
-
-                                                    <div class="skills-info skills-first-style">
-                                                        <div class="clearfix">
-                                                            <h4>C / C++</h4>
-                                                            <div class="skill-value">80%</div>
-                                                        </div>
-                                                        <div data-value="80" data-color="#007ced" class="skill-container skill-80">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Java / Java EE</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Web3j & Web3js</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Solidity</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Go - Haskell</h4>
-                                                            <div class="skill-value">75%</div>
-                                                        </div>
-                                                        <div data-value="75" data-color="#007ced" class="skill-container skill-75">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Python & MicroPython</h4>
-                                                            <div class="skill-value">80%</div>
-                                                        </div>
-                                                        <div data-value="80" data-color="#007ced" class="skill-container skill-80">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Arduino for IoT Device</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>-->
-                                            <!--*** End section ***-->
-
-                                            <!--*** Other skills ***-->
-                                            <!--<div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>Other Skills</h2>
-                                                    </div>
-
-                                                    <div class="skills-info skills-first-style">
-                                                        <div class="clearfix">
-                                                            <h4>ISO/OSI Stack</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Search Algorithms & Machine Learning for AI</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Computer Statistic & Maths</h4>
-                                                            <div class="skill-value">95%</div>
-                                                        </div>
-                                                        <div data-value="95" data-color="#007ced" class="skill-container skill-95">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>OS Structure (Linux - Windows - MacOS)</h4>
-                                                            <div class="skill-value">80%</div>
-                                                        </div>
-                                                        <div data-value="80" data-color="#007ced" class="skill-container skill-80">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>Computer Networks</h4>
-                                                            <div class="skill-value">90%</div>
-                                                        </div>
-                                                        <div data-value="90" data-color="#007ced" class="skill-container skill-90">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>-->
-                                            <!--*** End section ***-->
-
-                                            <div class="fw-divider-space" style="padding-top: 40px !important;"></div>
-
-                                            <!--*** Language spoken ***-->
-                                            <div class=" col-xs-12 col-sm-6 ">
-                                                <div class="fw-col-inner col_inner" data-paddings="0px 0px 0px 0px">
-
-                                                    <div class="block-title">
-                                                        <h2>Languages Spoken</h2>
-                                                    </div>
-
-                                                    <div class="skills-info skills-first-style">
-                                                        <div class="clearfix">
-                                                            <h4>Italian</h4>
-                                                            <div class="skill-value">100%</div>
-                                                        </div>
-                                                        <div data-value="100" data-color="#007ced" class="skill-container skill-100">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-
-                                                        <div class="clearfix">
-                                                            <h4>English</h4>
-                                                            <div class="skill-value">80%</div>
-                                                        </div>
-                                                        <div data-value="80" data-color="#007ced" class="skill-container skill-80">
-                                                            <div class="skill-percentage"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!--*** End section ***-->
-                                        </div>
-                                    </div>
-                                </section>
-                                </div>
-                            </div><!-- .entry-content -->
-                        </article><!-- #post-## -->
-                    </div><!-- #content -->
-                </div><!-- #primary -->
-            </div><!-- #main-content -->
-        </div>
-
-        <footer class="site-footer clearfix">
-            <div class="footer-social">
-                <ul class="footer-social-links">
-                    <li>
-                        <a href="https://www.linkedin.com/in/alberto-montefusco" target="_blank">
-                            <img src="icons/contacts/linkedin.svg" style="padding-right: 5px;" alt="" />
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Alberto-00" target="_blank">
-                            <img src="icons/contacts/github.svg" style="padding-right: 5px;" alt="" />
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/alberto_montefusco_" target="_blank">
-                            <img src="icons/contacts/instagram.svg" style="padding-right: 5px;" alt="" />
-                            Instagram
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.ethin.it" target="_blank">
-                            <img src="icons/contacts/logo-ethin.svg" style="margin-right: 5px; width: 24px" alt="" />
-                            EthIN - Blog
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-copyrights">
-                <p>© 2022 All rights reserved.</p>
-            </div>
-        </footer>
+  </div>
+</nav>
+
+<main>
+<!-- PAGE HEAD -->
+<header class="page-head">
+  <div class="wrap">
+    <span class="kicker">~/resume</span>
+    <h1>Re<span class="accent">sume</span></h1>
+    <div class="sub">MSc Cybersecurity · 110 cum laude · Red Team Penetration Tester</div>
+    <div class="rstats">
+      <div class="st"><b id="yrsExp">1+</b><span>years experience</span></div>
+      <div class="st"><b>110L</b><span>MSc · BSc honors</span></div>
+      <div class="st"><b>5</b><span>certifications</span></div>
+      <div class="st"><b>2</b><span>research projects</span></div>
     </div>
+  </div>
+</header>
+
+<!-- EDUCATION + EXPERIENCE -->
+<section>
+  <div class="wrap two-col rg-gap" id="Education">
+    <div>
+      <div class="sec-head reveal"><div class="sec-cmd">cat education.log<span class="blink">▋</span></div><h2><b>Education</b></h2></div>
+      <div class="tl">
+        <div class="tl-item reveal">
+          <span class="tl-period">2022 — 2024</span><span class="tl-org">University of Salerno</span>
+          <h4>Cybersecurity — Master's Degree</h4>
+          <p>Graduated with top honors (<b>110 cum laude</b>). Thesis on an <a href="documents/Tesi_magistrale.pdf" target="_blank">Intrusion Detection System</a> based on Siamese Neural Networks running on an MCU — built around a realistic IoT attack dataset I generated on a smart-home architecture I designed myself.</p>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-period">2019 — 2022</span><span class="tl-org">University of Salerno</span>
+          <h4>Computer Science — Bachelor's Degree</h4>
+          <p>Graduated <b>110 cum laude</b>. Thesis: an authentication system over the <a href="documents/Tesi.pdf" target="_blank">Ethereum blockchain</a> — the <i>KryptoAuth</i> Web DApp, with role-based admin approval before login.</p>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-period">2014 — 2019</span><span class="tl-org">Roccapiemonte, Campania</span>
+          <h4>Scientific High School Diploma</h4>
+          <p>Graduated from Scientific High School Bonaventura Rescigno.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="Experience">
+      <div class="sec-head reveal"><div class="sec-cmd">cat experience.log<span class="blink">▋</span></div><h2><b>Experience</b></h2></div>
+      <div class="tl">
+        <div class="tl-item cur reveal">
+          <span class="tl-period now">2025 — current</span><span class="tl-org">DGS S.p.A</span>
+          <h4>Red Team Penetration Tester</h4>
+          <p>I run advanced penetration tests to find and mitigate vulnerabilities across <a href="https://www.dgsspa.com/" target="_blank">IT/OT systems</a>. Since April 2025, my work centers on deep analysis and constant learning to keep infrastructures resilient against increasingly sophisticated threats.</p>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-period">2016 — 2019</span><span class="tl-org">Maryland</span>
+          <h4>Kids' Entertainer</h4>
+          <p>Started at 16 — my first taste of responsibility, teamwork and relating to all kinds of people.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS  (replace the placeholder rows with your real papers) -->
+<section id="Publications">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-cmd">ls ~/publications<span class="blink">▋</span></div><h2>Scientific <b>Publications</b></h2></div>
+    <div class="pub-list">
+      <a class="pub reveal" href="https://link.springer.com/article/10.1186/s12859-025-06257-3" target="_blank" rel="noopener">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <span class="pub-tag">open access · bmc bioinformatics</span>
+          <h4>Cancer detection via one-shot learning: integrating gene expression and genomic mutation analysis</h4>
+          <div class="pub-meta">A.&nbsp;Petescia, G.&nbsp;Benevento, A.&nbsp;Falanga, A.&nbsp;Macaro, D.&nbsp;Malandrino, <b>A.&nbsp;Montefusco</b>, R.&nbsp;Sorrentino, R.&nbsp;Zaccagnino · <b>BMC Bioinformatics</b> 26, 239 · <span class="accent">DOI 10.1186/s12859-025-06257-3</span></div>
+        </div>
+        <div class="pub-actions">
+          <span class="pub-act go"><i class="fa-solid fa-arrow-up-right-from-square"></i> article</span>
+        </div>
+      </a>
+      <a class="pub reveal" href="https://link.springer.com/chapter/10.1007/978-3-031-87769-8_34" target="_blank" rel="noopener">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <span class="pub-tag">conference · aina 2025 · lndect 247</span>
+          <h4>TinyML-Based Intrusion Detection System for Handling Class Imbalance in IoT-Edge Domain Using Siamese Neural Network on MCU</h4>
+          <div class="pub-meta">P.&nbsp;Fusco, <b>A.&nbsp;Montefusco</b>, G.&nbsp;P.&nbsp;Rimoli, F.&nbsp;Palmieri, M.&nbsp;Ficco · <b>Springer, Cham</b> · pp.&nbsp;389–402 · <span class="accent">DOI 10.1007/978-3-031-87769-8_34</span></div>
+        </div>
+        <div class="pub-actions">
+          <span class="pub-act go"><i class="fa-solid fa-arrow-up-right-from-square"></i> chapter</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES -->
+<section id="Certificates">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-cmd">ls ~/certificates<span class="blink">▋</span></div><h2><b>Certificates</b></h2></div>
+    <div class="cert-grid">
+      <div class="cert reveal" data-doc="documents/eCPPT.png" data-cap="eCPPT — Certified Professional Penetration Tester · <span class='accent'>26 May 2026</span>" role="button" tabindex="0" aria-label="eCPPT certificate — open preview">
+        <div class="clogo"><img src="icons/certs/ecppt.svg" alt="eCPPT"></div>
+        <div class="cinfo"><h4>eCPPT — Certified Professional Penetration Tester</h4><div class="cmeta"><b>INE Security · eLearnSecurity</b> · 26 May 2026</div><p class="cdesc">Network &amp; web-app exploitation, pivoting and professional reporting.</p><a class="cverify" href="https://certs.ine.com/8c7f6296-b116-4987-855c-c11bbec0b12a#acc.YXAL35m6" target="_blank" rel="noopener"><i class="fa-solid fa-circle-check"></i> verify credential</a></div>
+        <i class="czoom fa-solid fa-up-right-and-down-left-from-center"></i>
+      </div>
+      <div class="cert reveal" data-doc="documents/HTB-CPTS.pdf" data-cap="HTB CPTS — Certified Penetration Testing Specialist · <span class='accent'>08 May 2026</span>" role="button" tabindex="0" aria-label="HTB CPTS certificate — open preview">
+        <div class="clogo"><img src="icons/certs/cpts.png" alt="HTB CPTS"></div>
+        <div class="cinfo"><h4>HTB CPTS — Certified Penetration Testing Specialist</h4><div class="cmeta"><b>Hack The Box</b> · 08 May 2026 · No. HTBCERT-6569B0C7FD</div><p class="cdesc">Full-scope penetration test with a complete commercial-grade report.</p><div class="cverify-row"><a class="cverify" href="https://www.hackthebox.com/certificates" target="_blank" rel="noopener"><i class="fa-solid fa-circle-check"></i> verify credential</a><a class="cverify" href="https://www.credly.com/badges/77d0483e-88ab-403a-a803-d3f07467a276/public_url" target="_blank" rel="noopener"><i class="fa-solid fa-award"></i> Credly badge</a></div></div>
+        <i class="czoom fa-solid fa-up-right-and-down-left-from-center"></i>
+      </div>
+      <div class="cert reveal" data-doc="documents/r7-cert-1.pdf" data-cap="Rapid7 InsightVM — Product Certification · <span class='accent'>04 Apr 2025</span>" role="button" tabindex="0" aria-label="Rapid7 InsightVM Product certificate — open preview">
+        <div class="clogo"><img src="icons/certs/r7.png" alt="Rapid7"></div>
+        <div class="cinfo"><h4>Rapid7 InsightVM — Product Certification</h4><div class="cmeta"><b>Rapid7 · Partner Academy</b> · 04 Apr 2025 → 04 Apr 2027</div><p class="cdesc">Vulnerability management with InsightVM: scanning and assessment.</p><a class="cverify" href="https://verify.skilljar.com/c/b6qsyobfw296" target="_blank" rel="noopener"><i class="fa-solid fa-circle-check"></i> verify credential</a></div>
+        <i class="czoom fa-solid fa-up-right-and-down-left-from-center"></i>
+      </div>
+      <div class="cert reveal" data-doc="documents/r7-cert-2.pdf" data-cap="Rapid7 InsightVM — Advanced Certification · <span class='accent'>07 Apr 2025</span>" role="button" tabindex="0" aria-label="Rapid7 InsightVM Advanced certificate — open preview">
+        <div class="clogo"><img src="icons/certs/r7.png" alt="Rapid7"></div>
+        <div class="cinfo"><h4>Rapid7 InsightVM — Advanced Certification</h4><div class="cmeta"><b>Rapid7 · Partner Academy</b> · 07 Apr 2025 → 07 Apr 2027</div><p class="cdesc">Advanced InsightVM: risk prioritization, reporting and remediation workflows.</p><a class="cverify" href="https://verify.skilljar.com/c/95qxnqqjomig" target="_blank" rel="noopener"><i class="fa-solid fa-circle-check"></i> verify credential</a></div>
+        <i class="czoom fa-solid fa-up-right-and-down-left-from-center"></i>
+      </div>
+      <div class="cert reveal" data-doc="documents/CyberChallenge.IT-2022.jpg" data-cap="CyberChallenge.IT 2022 · <span class='accent'>CINI National CyberSecurity Lab</span>" role="button" tabindex="0" aria-label="CyberChallenge.IT 2022 certificate — open preview">
+        <div class="clogo"><img src="icons/certs/cyberchallenge.svg" alt="CyberChallenge.IT"></div>
+        <div class="cinfo"><h4>CyberChallenge.IT 2022</h4><div class="cmeta"><b>CINI National CyberSecurity Lab</b> · 01 Jun 2022</div><p class="cdesc">National ethical-hacking training &amp; CTF program by CINI's CyberSecurity National Lab.</p></div>
+        <i class="czoom fa-solid fa-up-right-and-down-left-from-center"></i>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS RADAR -->
+<section id="Hard_Skills">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="sec-cmd">./skills --radar<span class="blink">▋</span></div><h2>Cybersecurity <b>Skills</b></h2></div>
+    <div class="radar-wrap">
+      <div class="radar-box reveal"><canvas id="certificationsRadar"></canvas></div>
+      <ul class="skill-legend reveal">
+        <li><span class="sk-name">Penetration Testing</span><span class="sk-bar"><span data-w="95"></span></span><span class="sk-val">95%</span></li>
+        <li><span class="sk-name">Wi-Fi Penetration Testing</span><span class="sk-bar"><span data-w="80"></span></span><span class="sk-val">80%</span></li>
+        <li><span class="sk-name">Red Team</span><span class="sk-bar"><span data-w="70"></span></span><span class="sk-val">70%</span></li>
+        <li><span class="sk-name">IoT Security</span><span class="sk-bar"><span data-w="70"></span></span><span class="sk-val">70%</span></li>
+        <li><span class="sk-name">Digital Forensics</span><span class="sk-bar"><span data-w="65"></span></span><span class="sk-val">65%</span></li>
+        <li><span class="sk-name">Threat Hunting</span><span class="sk-bar"><span data-w="65"></span></span><span class="sk-val">65%</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <ul class="socials">
+      <li><a href="https://www.linkedin.com/in/alberto-montefusco" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://github.com/Alberto-00" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+      <li><a href="https://www.ethin.it" target="_blank"><i class="fa-solid fa-rss"></i> EthIN Blog</a></li>
+    </ul>
+    <div class="foot-copy">© <span id="yr">2026</span> Alberto Montefusco · <span class="accent">all rights reserved</span></div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Torna su"><i class="fa-solid fa-arrow-up"></i></button>
+
+<div class="lightbox" id="lightbox" aria-hidden="true">
+  <button class="lb-close" id="lbClose" aria-label="Chiudi">✕</button>
+  <div class="lb-inner">
+    <div class="lb-media" id="lbMedia"></div>
+    <div class="lb-bar">
+      <div class="lb-cap" id="lbCap"></div>
+      <a class="lb-open" id="lbOpen" href="#" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square"></i> Apri in una pagina</a>
+    </div>
+  </div>
 </div>
-<script src="js/resume.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="app.js"></script>
+<script>
+(function(){
+  // animate skill bars when visible
+  var bars = document.querySelectorAll('.sk-bar > span');
+  var bio = new IntersectionObserver(function(es){
+    es.forEach(function(e){ if(e.isIntersecting){ e.target.style.width = e.target.dataset.w+'%'; bio.unobserve(e.target); } });
+  },{threshold:.4});
+  bars.forEach(function(b){ bio.observe(b); });
+
+  // radar chart, theme-aware (defense blue / hacker red)
+  var el = document.getElementById('certificationsRadar');
+  var radar = null;
+  function accentRgb(){
+    var c = getComputedStyle(document.body).getPropertyValue('--accent').trim().replace('#','');
+    if(c.length===3) c=c.split('').map(function(x){return x+x;}).join('');
+    var n=parseInt(c,16)||0; return [(n>>16)&255,(n>>8)&255,n&255];
+  }
+  function paintRadar(){
+    if(!radar) return;
+    var a=accentRgb(), s='rgba('+a[0]+','+a[1]+','+a[2]+',';
+    var ds=radar.data.datasets[0];
+    ds.backgroundColor=s+'0.14)'; ds.borderColor=s+'0.9)'; ds.pointBackgroundColor=s+'1)';
+    radar.update();
+  }
+  if(el && window.Chart){
+    var line='rgba(150,160,180,0.16)';
+    radar = new Chart(el.getContext('2d'), {
+      type:'radar',
+      data:{
+        labels:['Penetration Testing','Wi-Fi Pentest','Red Team','IoT Security','Digital Forensics','Threat Hunting'],
+        datasets:[{
+          label:'Skill level', data:[95,80,70,70,65,65], fill:true,
+          backgroundColor:'rgba(59,130,246,0.14)', borderColor:'rgba(59,130,246,0.9)',
+          pointBackgroundColor:'rgba(59,130,246,1)', pointBorderColor:'#0b0e14',
+          pointRadius:4, pointHoverRadius:7, borderWidth:2
+        }]
+      },
+      options:{
+        responsive:true, maintainAspectRatio:false,
+        plugins:{ legend:{display:false} },
+        scales:{ r:{
+          min:0, max:100, beginAtZero:true,
+          grid:{ circular:false, color:line },
+          angleLines:{ color:line },
+          pointLabels:{ color:'rgba(199,207,219,0.85)', font:{ size:12, family:'JetBrains Mono' } },
+          ticks:{ display:false, stepSize:20 }
+        }}
+      }
+    });
+    paintRadar();
+    document.addEventListener('themechange', paintRadar);
+  }
+})();
+</script>
 </body>
 </html>

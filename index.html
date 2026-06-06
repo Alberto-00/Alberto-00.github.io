@@ -1,478 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone-no">
-    <meta name="apple-mobile-web-app-title" content="Alberto Montefusco | Computer Science Student">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/blue_team/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/blue_team/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/blue_team/favicon-16x16.png">
-    <link rel="manifest" href="icons/favicon/blue_team/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#222">
-    <meta name="theme-color" content="#222">
-
-    <title>Alberto Montefusco | CyberSecurity Student</title>
-
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/library.css">
-    <link rel="stylesheet" href="lib/dark/css/dark.css">
-    <link rel="stylesheet" href="lib/dark/css/font.css">
-    <link rel="stylesheet" href="lib/fontawesome/css/all.css">
-
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/jquery/jquery.js"></script>
-    <script src="lib/animejs/animejs.js"></script>
-    <script src="js/text-change.js"></script>
-    <script src="js/header.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){var t='defense';try{t=localStorage.getItem('am_theme')||'defense';}catch(e){}var d=document.documentElement;d.setAttribute('data-theme',t);d.style.backgroundColor='#0b0e14';})();</script>
+<title>Alberto Montefusco — Red Team Operator</title>
+<meta name="description" content="Alberto Montefusco — Red Team Penetration Tester focused on offensive security, IoT and AI. Projects, skills, certifications and contact.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alberto Montefusco">
+<meta property="og:url" content="https://alberto-00.github.io/">
+<link rel="canonical" href="https://alberto-00.github.io/">
+<meta property="og:title" content="Alberto Montefusco — Red Team Penetration Tester">
+<meta property="og:description" content="Offensive security, IoT and AI. Projects, skills and certifications — eCPPT, HTB CPTS, Rapid7 InsightVM.">
+<meta property="og:image" content="https://alberto-00.github.io/icons/og-logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alberto Montefusco — Red Team Penetration Tester">
+<meta name="twitter:description" content="Offensive security, IoT and AI. Projects, skills and certifications.">
+<meta name="twitter:image" content="https://alberto-00.github.io/icons/og-logo.png">
+<meta name="theme-color" content="#0b0e14">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="shortcut icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
 </head>
 <body>
 
-<!--<div class="lm-animated-bg" style="background-position: calc(50% + 5.29923px) calc(50% + 6.72491px);"></div>-->
+<div class="bg-grid"></div>
+<canvas id="rain"></canvas>
+<div class="vignette"></div>
+<div class="scanlines"></div>
 
-<!-- Loading animation -->
-<div class="preloader" style="display: none;">
-    <div class="preloader-animation">
-        <div class="preloader-spinner"></div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html"><img class="brand-logo blue" src="icons/logo-blue.png" alt="AM logo"><img class="brand-logo red" src="icons/logo-red.png" alt="">alberto<b>@</b>montefusco<span class="cur">_</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li class="nav-item has-drop">
+          <a href="index.html" class="np active">./about</a>
+          <ul class="dropdown">
+            <li><a href="index.html#what">What I Do</a></li>
+            <li><a href="index.html#skills">Soft Skills</a></li>
+            <li><a href="index.html#hobby">Hobby &amp; Interests</a></li>
+            <li><a href="index.html#facts">Fun Facts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-drop">
+          <a href="resume.html" class="np">./resume</a>
+          <ul class="dropdown">
+            <li><a href="resume.html#Education">Education</a></li>
+            <li><a href="resume.html#Experience">Experience</a></li>
+            <li><a href="resume.html#Publications">Publications</a></li>
+            <li><a href="resume.html#Certificates">Certificates</a></li>
+            <li><a href="resume.html#Hard_Skills">Skills Radar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-drop">
+          <a href="contact.html" class="np">./contact</a>
+          <ul class="dropdown">
+            <li><a href="contact.html#find">Find Me</a></li>
+            <li><a href="contact.html#message">Send Message</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="documents/CV_Alberto_Montefusco.pdf" target="_blank" class="np">cv.pdf</a></li>
+      </ul>
+      <span class="sw-label">mode</span>
+      <div class="theme-switch" role="group" aria-label="Theme mode">
+        <button data-theme-btn="defense"><i class="fa-solid fa-shield-halved"></i><span class="lbl">DEFENSE</span></button>
+        <button data-theme-btn="hacker"><i class="fa-solid fa-skull"></i><span class="lbl">HACKER</span></button>
+      </div>
+      <button class="nav-toggle" aria-label="menu"><i class="fa-solid fa-terminal"></i></button>
     </div>
-</div>
-<!-- /Loading animation -->
+  </div>
+</nav>
 
-<!-- Scroll To Top Button -->
-<a id="scrollUp" class="one" href="javascript:void(0)">
-    <i class="fa-solid fa-chevron-up"></i>
-</a>
-<!-- /Scroll To Top Button -->
+<main>
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-left">
+      <span class="kicker">red team operator · pentester</span>
+      <h1>Alberto<br><span class="ln2" data-scramble>Montefusco</span></h1>
+      <div class="role"><span data-rotate></span></div>
+      <p class="bio">Learn. Break. Build. I hunt for weaknesses in IT/OT systems and turn them into hardened defenses. Keen on IoT, AI and offensive security — driven by determination and curiosity.</p>
+      <div class="btns">
+        <a class="btn btn-primary" href="documents/CV_Alberto_Montefusco.pdf" target="_blank"><i class="fa-solid fa-download"></i> Download CV</a>
+        <a class="btn btn-ghost" href="contact.html"><i class="fa-solid fa-paper-plane"></i> Get in touch</a>
+      </div>
+      <div class="hero-meta">
+        <div class="m"><span class="k">Role</span><span class="v accent">Red Team Pentester</span></div>
+        <div class="m"><span class="k">Company</span><span class="v">DGS S.p.A</span></div>
+        <div class="m"><span class="k">Based in</span><span class="v">Campania, IT</span></div>
+      </div>
+    </div>
 
-<div class="page-scroll">
-    <div id="page_container" class="page-container bg-move-effect theme-style-dark animated transition-flip-in-right" data-animation="transition-flip-in-right">
-
-        <!-- Header -->
-        <header id="site_header" class="header">
-            <div class="header-content clearfix">
-
-                <!-- Text Logo -->
-                <div class="text-logo">
-                    <a href="index.html">
-                        <div class="logo-text">
-                            <img src="icons/logo.svg" style="width: 60px; vertical-align: middle;" alt="logo">
-                            Alberto <span>Montefusco</span>
-                        </div>
-                    </a>
-                </div>
-                <!-- /Text Logo -->
-
-
-                <!-- Navigation -->
-                <div id="toggle" class="site-nav animate mobile-menu-hide">
-                    <ul id="menu-classic-menu" class="leven-classic-menu site-main-menu">
-                        <li id="menu-item-160" class="current-menu-item">
-                            <a href="javascript:void(0)">About Me <i class="arrow down"></i></a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="#what_I_Do" data-hover="1">What I DO</a></li>
-                                <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="#Soft_Skills" data-hover="1">Soft Skills</a></li>
-                                <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="#Hobby" data-hover="1">Hobby and Interests</a></li>
-                                <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="#Fun_Facts" data-hover="1">Fun Facts</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174">
-                            <a href="resume.html" data-hover="1">Resume <i class="arrow down"></i></a>
-                            <ul class="sub-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="resume.html#Education" data-hover="1">Education</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="resume.html#Experience" data-hover="1">Experience</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="resume.html#Certificates" data-hover="1">Certificates</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="resume.html#Hard_Skills" data-hover="1">Hard Skills</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191"><a href="contact.html" data-hover="1">Contact</a></li>
-                        <li>
-                            <label class="switch">
-                                <input class="checkbox" type="checkbox" />
-                                <span class="slider round"></span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-                <a id="menu-phone" class="menu-toggle mobile-visible">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </header>
-        <!-- /Header -->
-
-        <div id="main" class="site-main">
-            <div id="main-content" class="single-page-content">
-                <div id="primary" class="content-area">
-                    <div id="content" class="page-content site-content single-post" role="main">
-                        <article id="post-157" class="post-157 page type-page status-publish hentry">
-                            <div class="entry-content">
-                                <div class="fw-page-builder-content">
-                                    <section class="fw-main-row ">
-                                        <div class="fw-container">
-                                            <div class="row">
-                                                <div class=" col-xs-12 col-sm-12 ">
-                                                    <div id="col_inner_877489360620b3037fc9b064f63a7372" class="fw-col-inner" data-paddings="15px 0px 15px 0px">
-                                                        <div id="home_content_954218bfd87cb3b458721f4a70135965" class="home-content">
-                                                            <div class="row flex-v-align">
-                                                                <div class="col-sm-12 col-md-5 col-lg-5">
-                                                                    <div class="home-photo">
-                                                                        <div class="hp-inner" style="background-position: calc(50% + 5.29923px) calc(50% + 6.72491px);">
-                                                                            <img src="icons/myphoto.jpg" alt="myphoto">
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="col-sm-12 col-md-7 col-lg-7">
-                                                                    <div class="home-text hp-left">
-                                                                        <h4 class="txt-eff1">Penetration Tester</h4>
-                                                                        <h1>Alberto Montefusco</h1>
-                                                                        <p>Learn. Build innovation. Solve problems.<br>
-                                                                            I like playing sports, travelling and solving coding challenges. I am keen on IoT and AI.
-                                                                            I like testing my capability and improving my skills, in particular informatic ones.
-                                                                            Determination and curiosity are the keywords that better describe my personality.
-                                                                        </p>
-                                                                        <div class="home-buttons">
-                                                                            <a href="documents/CV_Alberto_Montefusco.pdf" target="_blank" class="btn btn-primary">Download CV</a>
-                                                                            <a href="contact.html" target="_self" id="" class="btn btn-secondary">Contact</a>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- What I DO -->
-                                            <div class="row">
-                                                <div class=" col-xs-12 col-sm-12 ">
-                                                    <div id="col_inner_c2094ed9c996102f2ef70b6125c4fbf5" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div class="fw-divider-space" style="padding-top: 50px;" id="what_I_Do"></div>
-                                                        <div class="block-title" >
-                                                            <h2>What I Do</h2>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="row">
-                                                <div class=" col-xs-12 col-sm-6 ">
-                                                    <div id="col_inner_3fa94961ec32117c71b91b80d4565769" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div id="info-list-6210ffd24dbeb" class="info-list-w-icon">
-
-                                                            <div class="info-block-w-icon">
-                                                                <div class="ci-icon">
-                                                                    <img src="icons/projects/blue_team/cancer.svg" alt="cancer"/>
-                                                                </div>
-                                                                <div class="ci-text">
-                                                                    <h4>Detection Signature Cancer <a href="https://github.com/Alberto-00/Detection-signature-cancer" target="_blank"> (GitHub Link)</a></h4>
-                                                                    <p> The size of the dataset used was significantly increased in order to improve the diversity and
-                                                                        representativeness of the data. This adjustment allowed the model to learn from a wider variety of examples, improving its generalization.
-                                                                        In addition, adjustments were made to both models involved in this study, both the classification model and the Siamese-type model. Finally,
-                                                                        a specification was introduced regarding the types of mutations, this allowed for greater precision in the analysis of genetic information.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="info-block-w-icon">
-                                                                <div class="ci-icon">
-                                                                    <img src="icons/projects/blue_team/super-mario.svg" alt="super-mario"/>
-                                                                </div>
-                                                                <div class="ci-text">
-                                                                    <h4>Super Mario Bros AI <a href="https://github.com/Alberto-00/Super-Mario-Bros-AI" target="_blank"> (GitHub Link)</a></h4>
-                                                                    <p>The following project concerns the development of an intelligent agent for the famous game produced by Nintendo Super Mario Bros.
-                                                                        The goal of this project was to design, implement and train an agent with the Q-learning reinforcement learning
-                                                                        algorithm. Subsequently, the results of learning with the Q-learning algorithm were compared with the SARSA algorithm. In our case
-                                                                        study, other types of learning involving the double Q-learning algorithm, Deep Q-Network (DQN) and Double Deep Q-Network (DDQN).
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="info-block-w-icon">
-                                                                <div class="ci-icon">
-                                                                    <img src="icons/projects/blue_team/ethereum.svg" alt="ethereum"/>
-                                                                </div>
-                                                                <div class="ci-text">
-                                                                    <h4>KryptoAuth <a href="https://github.com/Alberto-00/Kryptoauth-NFT" target="_blank"> (GitHub Link)</a></h4>
-                                                                    <p>The Web DApp KryptoAuth is made with the aim of offering greater security during the authentication operation
-                                                                        by exploiting the Ethereum Blockchain technology. It allows users to purchase NFTs using KryptoTokens (personalized tokens that can be
-                                                                        purchased by users by paying ether) and use NFTs to obtain discounts in various categories offered by the Web DApp.
-                                                                        In addition, KryptoAuth implements an innovative verification system that leverages smart contracts for transparent and secure user authentication.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=" col-xs-12 col-sm-6 ">
-                                                    <div id="col_inner_931ccceee4bc772acc2735fc06fc1c62" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div id="info-list-6210ffd24ddd8" class="info-list-w-icon">
-
-                                                            <div class="info-block-w-icon">
-                                                                <div class="ci-icon">
-                                                                    <img src="icons/projects/blue_team/facial-recognition.svg" alt="facial-recognition"/>
-                                                                </div>
-                                                                <div class="ci-text">
-                                                                    <h4>Differential-MAD <a href="https://github.com/Alberto-00/Differential-MAD" target="_blank"> (GitHub Link)</a></h4>
-                                                                    <p> Facial Recognition (FR) systems are vulnerable to multiple attacks, one of which is the morphing attack of the face (MA).
-                                                                        Therefore, my Team and I have decided to develop a classifier capable of recognizing several of these attacks based on five
-                                                                        different techniques: OpenCV (OCV), FaceMorpher (FM), Style-GAN 2 (SG), WebMorpher (WM), and AMSL.
-                                                                        The model used, MixNets, was trained on the SMDD dataset and validated on subsets of the test set.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="info-block-w-icon">
-                                                                <div class="ci-icon">
-                                                                    <img src="icons/projects/blue_team/iot.svg" alt="iot"/>
-                                                                </div>
-                                                                <div class="ci-text">
-                                                                    <h4>PassChain <a href="https://github.com/Alberto-00/PassChain-IoT" target="_blank"> (GitHub Link)</a></h4>
-                                                                    <p> PassChain is an IoT device to store user's credentials (like username and password) and send them to other devices
-                                                                        with a Bluetooth connection. Datas are encrypted with AES-128 bit in GCM mode and the board setup is made connecting
-                                                                        PassChain to a server Python with an SSL communication. Each operation is authorized only if the user authenticates
-                                                                        himself with a fingerprint. The project is produced for the IoT Security course of Master's Degree in Cybersecurity
-                                                                        at University of Salerno.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="info-block-w-icon">
-                                                                <div class="ci-icon">
-                                                                    <img src="icons/projects/blue_team/dns.svg" alt="dns"/>
-                                                                </div>
-                                                                <div class="ci-text">
-                                                                    <h4>DNS Benchmarking <a href="https://github.com/Alberto-00/Benchmarking-DNS-Server" target="_blank"> (GitHub Link)</a></h4>
-                                                                    <p> DNS original version based on UDP or TCP offers no guarantee of security, so alternatives have emerged that
-                                                                        guarantee confidentiality such as DNS-over-TLS and DNS-over-HTTPS and then DNSSEC that guarantees authenticity and integrity.
-                                                                        In this project, an attempt was made to analyze this overhead by benchmarking the protocols: DNS-over-UDP, DNS-over-TCP, DNS-over-TLS,
-                                                                        DNS-over-HTTPS, and DNSSEC, each of which was then tested on the three servers: BIND9, PowerDNS, and Technitium.
-                                                                    </p>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- /What I DO -->
-
-                                            <!-- Soft Skills & Hobby -->
-                                            <div class="row">
-                                                <div class=" col-xs-12 col-sm-12 ">
-                                                    <div id="col_inner_28268963d54f17fbf0a61a920e475dcf" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div class="fw-divider-space" style="padding-top: 35px;" id="Soft_Skills"></div>
-                                                        <div class="block-title">
-                                                            <h2>Soft Skills</h2>
-                                                        </div>
-                                                        <div class="row mb-9 mb-xl-12 text-white">
-                                                            <div class="col-md-6 mb-4 mb-md-0 text-white padding-right">
-                                                                <p class="h5 mb-0">Communication and Interpersonal Skills</p>
-                                                                <p>I like working in team, sharing my ideas and paying attention to others. In this way I can improve both
-                                                                    technical and social skills. I share my ideas in a clear and concise way thanks to the various projects to which
-                                                                    I participated during the years of study at the University of Salerno. I can also work alone, managing
-                                                                    carefully anxiety and time. Also, I adapt easily to changes and pay a lot of attention to details.
-                                                                </p>
-                                                            </div>
-                                                            <div class="col-md-6 mb-4 mb-md-0 text-white padding-left">
-                                                                <p class="h5 mb-0">Organizational Skills</p>
-                                                                <p>Attending University, I learned to develop projects of large dimensions in collaboration with my
-                                                                    colleagues. I learned how to merge my solutions and those proposed by my team into a single optimal idea.
-                                                                    Sometimes I acted as project manager: I managed deadlines and collective resources and I learned to take on
-                                                                    all the responsibilities that were entrusted to me, leading all projects to success.
-                                                                </p>
-                                                            </div>
-                                                        </div>
-
-                                                        <div class="fw-divider-space" style="padding-top: 55px;" id="Hobby"></div>
-
-                                                        <div class="block-title">
-                                                            <h2>Hobby and Interests</h2>
-                                                        </div>
-
-                                                        <div class="row">
-                                                            <div class=" col-xs-12 col-sm-6 ">
-                                                                <div  class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                                    <div class="info-list-w-icon">
-                                                                        <div class="info-block-w-icon">
-                                                                            <div class="ci-icon">
-                                                                                <img src="icons/contacts/logo-ethin-blu.svg" alt="logo"/>
-                                                                                <!--<i class="fa-solid fa-person-swimming"></i>-->
-                                                                            </div>
-                                                                            <div class="ci-text">
-                                                                                <h4>Blog</h4>
-                                                                                <p>I have created a blog <b><a href="https://www.ethin.it" target="_blank">EthIN</a></b> dedicated to Network Science and Computer Networks. In this blog I post theoretical topics,
-                                                                                    architectures and configurations of computer networks.
-                                                                                </p>
-                                                                            </div>
-                                                                            <!--<div class="ci-text">
-                                                                                <h4>Sport</h4>
-                                                                                <p>I like sports a lot and I am very competitive. I have been swimming since the age of 5 and have participated in numerous competitions
-                                                                                    carried out in various regions of Italy, getting to the podium many times.
-                                                                                </p>
-                                                                            </div>-->
-                                                                        </div>
-
-                                                                        <div class="fw-divider-space" style="padding-top: 40px;"></div>
-
-                                                                        <div class="info-block-w-icon">
-                                                                            <div class="ci-icon">
-                                                                                <i class="fa-solid fa-map-location-dot"></i>
-                                                                            </div>
-                                                                            <div class="ci-text">
-                                                                                <h4>Travel</h4>
-                                                                                <p>I love travelling around the world, in particular, to visit naturalistic places. I travelled across Italy
-                                                                                    and visited some European cities, like Barcelona. I like changes and interacting with other people.
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-
-                                                            <div class=" col-xs-12 col-sm-6 ">
-                                                                <div  class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                                    <div class="info-list-w-icon">
-                                                                        <div class="info-block-w-icon">
-                                                                            <div class="ci-icon">
-                                                                                <i class="fa-solid fa-code"></i>
-                                                                            </div>
-                                                                            <div class="ci-text">
-                                                                                <h4>Problem Solving</h4>
-                                                                                <p>I like to challenge myself and improve my skills, especially in IT. I like to participate in different problems solving competitions especially coding challenges
-                                                                                    organized by Google and solve the various CTF  online.
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <div class="fw-divider-space" style="padding-top: 40px;"></div>
-
-                                                                        <div class="info-block-w-icon">
-                                                                            <div class="ci-icon">
-                                                                                <i class="fa-solid fa-utensils"></i>
-                                                                            </div>
-                                                                            <div class="ci-text">
-                                                                                <h4>Food Lover</h4>
-                                                                                <p>When I visit new places, I like trying different foods, in particular, I love eating Asian and
-                                                                                    Mexican dishes. I prefer restaurants where there is "all you can eat" menu because, in this way,
-                                                                                    I can taste as much as possibile.
-                                                                                </p>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- /Soft Skills & Hobby -->
-
-                                            <div class="fw-divider-space" style="padding-top: 55px;" id="Fun_Facts"></div>
-
-                                            <!-- Fun Facts -->
-                                            <div class="row">
-                                                <div class=" col-xs-12 col-sm-12 ">
-                                                    <div id="col_inner_1a922c7897708c3a2eded034e6e7a555" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div class="block-title">
-                                                            <h2>Fun Facts</h2>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class=" col-xs-12 col-sm-3 ">
-                                                    <div id="col_inner_831ae7ae8f7189a8a47ec09caf7501f4" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div class="lm-info-block gray-default">
-                                                            <i class="fas fa-swimmer"></i>
-                                                            <h4>Swimming Victory</h4>
-                                                            <span class="lm-info-block-value">10</span>
-                                                            <span class="lm-info-block-text"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class=" col-xs-12 col-sm-3 ">
-                                                    <div id="col_inner_7f8682d39c5ba46b284a08d3db46c5f6" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div class="lm-info-block gray-default">
-                                                            <i class="fa-solid fa-unlock-keyhole"></i>
-                                                            <h4>CTF Solved</h4>
-                                                            <span class="lm-info-block-value">20</span>
-                                                            <span class="lm-info-block-text"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class=" col-xs-12 col-sm-3 ">
-                                                    <div id="col_inner_6d4fcdd7dc42e01531a70050562e10e6" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div class="lm-info-block gray-default">
-                                                            <i class="fa-brands fa-google"></i>
-                                                            <h4>Google Challenge</h4>
-                                                            <span class="lm-info-block-value">2</span>
-                                                            <span class="lm-info-block-text"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class=" col-xs-12 col-sm-3 ">
-                                                    <div id="col_inner_a719203952a1d6b1e4e8878645682d3c" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                        <div class="lm-info-block gray-default">
-                                                            <i class="linecons linecons-cup"></i>
-                                                            <h4>Coffee Consumed</h4>
-                                                            <span class="lm-info-block-value">1,286</span>
-                                                            <span class="lm-info-block-text"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <!-- /Fun Facts -->
-                                        </div>
-                                    </section>
-                                </div>
-                            </div><!-- .entry-content -->
-                        </article><!-- #post-## -->
-                    </div><!-- #content -->
-                </div><!-- #primary -->
-            </div><!-- #main-content -->
+    <div class="hero-term">
+      <div class="term" id="hero-term">
+        <div class="term-bar">
+          <span class="dot r"></span><span class="dot y"></span><span class="dot g"></span>
+          <span class="title"><span class="live">session</span> — bash — 80×24</span>
         </div>
-
-        <footer class="site-footer clearfix">
-            <div class="footer-social">
-                <ul class="footer-social-links">
-                    <li>
-                        <a href="https://www.linkedin.com/in/alberto-montefusco" target="_blank">
-                        <img src="icons/contacts/linkedin.svg" style="padding-right: 5px;" alt="" />
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Alberto-00" target="_blank">
-                            <img src="icons/contacts/github.svg" style="padding-right: 5px;" alt="" />
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/alberto_montefusco_" target="_blank">
-                            <img src="icons/contacts/instagram.svg" style="padding-right: 5px;" alt="" />
-                            Instagram
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.ethin.it" target="_blank">
-                            <img src="icons/contacts/logo-ethin.svg" style="margin-right: 5px; width: 24px" alt="" />
-                            EthIN - Blog
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-copyrights">
-                <p>© 2022 All rights reserved.</p>
-            </div>
-        </footer>
+        <div class="term-body"></div>
+      </div>
     </div>
-</div>
+  </div>
+</header>
+
+<!-- WHAT I DO -->
+<section id="what">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-cmd">ls ~/projects<span class="blink">▋</span></div>
+      <h2>What I <b>Do</b></h2>
+    </div>
+    <div class="proj-grid">
+
+      <article class="card reveal">
+        <span class="tag">ai · bio</span>
+        <div class="card-top">
+          <div class="card-ico"><span class="pico"><img class="blue" src="icons/projects/cancer-blue.svg" alt=""><img class="red" src="icons/projects/cancer-red.svg" alt=""></span></div>
+          <h4>Detection Signature Cancer<span class="ext">github.com/Alberto-00</span></h4>
+        </div>
+        <p>Scaled up dataset diversity to improve generalization, then tuned both the classification and the Siamese-type models. Added mutation-type specification for higher precision in genetic information analysis.</p>
+        <a class="ghlink" href="https://github.com/Alberto-00/Detection-signature-cancer" target="_blank"><i class="fa-brands fa-github"></i> view repo →</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="tag">rl · ai</span>
+        <div class="card-top">
+          <div class="card-ico"><span class="pico"><img class="blue" src="icons/projects/super-mario-blue.svg" alt=""><img class="red" src="icons/projects/super-mario-red.svg" alt=""></span></div>
+          <h4>Super Mario Bros AI<span class="ext">github.com/Alberto-00</span></h4>
+        </div>
+        <p>Designed and trained an intelligent agent with Q-learning, then benchmarked it against SARSA, double Q-learning, DQN and Double DQN reinforcement-learning algorithms.</p>
+        <a class="ghlink" href="https://github.com/Alberto-00/Super-Mario-Bros-AI" target="_blank"><i class="fa-brands fa-github"></i> view repo →</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="tag">web3 · nft</span>
+        <div class="card-top">
+          <div class="card-ico"><span class="pico"><img class="blue" src="icons/projects/ethereum-blue.svg" alt=""><img class="red" src="icons/projects/ethereum-red.svg" alt=""></span></div>
+          <h4>KryptoAuth<span class="ext">github.com/Alberto-00</span></h4>
+        </div>
+        <p>A Web DApp hardening authentication via the Ethereum blockchain. Users buy NFTs with custom KryptoTokens for category discounts, while smart contracts deliver transparent, secure verification.</p>
+        <a class="ghlink" href="https://github.com/Alberto-00/Kryptoauth-NFT" target="_blank"><i class="fa-brands fa-github"></i> view repo →</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="tag">cv · security</span>
+        <div class="card-top">
+          <div class="card-ico"><span class="pico"><img class="blue" src="icons/projects/facial-recognition-blue.svg" alt=""><img class="red" src="icons/projects/facial-recognition-red.svg" alt=""></span></div>
+          <h4>Differential-MAD<span class="ext">github.com/Alberto-00</span></h4>
+        </div>
+        <p>A classifier that detects face-morphing attacks across five techniques (OpenCV, FaceMorpher, StyleGAN2, WebMorpher, AMSL). MixNets trained on the SMDD dataset and validated on test subsets.</p>
+        <a class="ghlink" href="https://github.com/Alberto-00/Differential-MAD" target="_blank"><i class="fa-brands fa-github"></i> view repo →</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="tag">iot · crypto</span>
+        <div class="card-top">
+          <div class="card-ico"><span class="pico"><img class="blue" src="icons/projects/iot-blue.svg" alt=""><img class="red" src="icons/projects/iot-red.svg" alt=""></span></div>
+          <h4>PassChain<span class="ext">github.com/Alberto-00</span></h4>
+        </div>
+        <p>An IoT vault that stores credentials and ships them over Bluetooth. Data is AES-128-GCM encrypted, the board talks to a Python server over SSL, and every operation is gated by fingerprint auth.</p>
+        <a class="ghlink" href="https://github.com/Alberto-00/PassChain-IoT" target="_blank"><i class="fa-brands fa-github"></i> view repo →</a>
+      </article>
+
+      <article class="card reveal">
+        <span class="tag">dns · net</span>
+        <div class="card-top">
+          <div class="card-ico"><span class="pico"><img class="blue" src="icons/projects/dns-blue.svg" alt=""><img class="red" src="icons/projects/dns-red.svg" alt=""></span></div>
+          <h4>DNS Benchmarking<span class="ext">github.com/Alberto-00</span></h4>
+        </div>
+        <p>Benchmarked DNS-over-UDP/TCP/TLS/HTTPS and DNSSEC for the security overhead they add, each tested across three resolvers: BIND9, PowerDNS and Technitium.</p>
+        <a class="ghlink" href="https://github.com/Alberto-00/Benchmarking-DNS-Server" target="_blank"><i class="fa-brands fa-github"></i> view repo →</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- SOFT SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-cmd">cat soft_skills.md<span class="blink">▋</span></div>
+      <h2>Soft <b>Skills</b></h2>
+    </div>
+    <div class="two-col">
+      <div class="panel reveal">
+        <h3>communication</h3>
+        <p>I like working in a team — sharing ideas clearly and paying attention to others — which sharpens both my technical and social skills. I also work well alone, managing time and pressure, adapting quickly to change and caring about the details.</p>
+      </div>
+      <div class="panel reveal">
+        <h3>organization</h3>
+        <p>At university I built large projects with colleagues, merging everyone's solutions into a single optimal idea. I often acted as project manager — owning deadlines and shared resources, and carrying responsibility through to a successful delivery.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOBBY -->
+<section id="hobby">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-cmd">cat interests.json<span class="blink">▋</span></div>
+      <h2>Hobby &amp; <b>Interests</b></h2>
+    </div>
+    <div class="hobby-grid">
+      <div class="hobby reveal">
+        <div class="hi"><i class="fa-solid fa-network-wired"></i></div>
+        <div><h4>Blog — EthIN</h4><p>I run <a href="https://www.ethin.it" target="_blank">EthIN</a>, a blog on Network Science and Computer Networks — theory, architectures and real-world network configurations.</p></div>
+      </div>
+      <div class="hobby reveal">
+        <div class="hi"><i class="fa-solid fa-location-dot"></i></div>
+        <div><h4>Travel</h4><p>I love travelling the world for its natural places. I've explored Italy and European cities like Barcelona — I enjoy change and meeting new people.</p></div>
+      </div>
+      <div class="hobby reveal">
+        <div class="hi"><i class="fa-solid fa-flag-checkered"></i></div>
+        <div><h4>Problem Solving</h4><p>I challenge myself to keep improving — coding competitions organized by Google and CTF challenges online are my favorite playground.</p></div>
+      </div>
+      <div class="hobby reveal">
+        <div class="hi"><i class="fa-solid fa-utensils"></i></div>
+        <div><h4>Food Lover</h4><p>New places mean new food. I love Asian and Mexican dishes — and "all you can eat" menus, so I can taste as much as possible.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FUN FACTS -->
+<section id="facts">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-cmd">./stats --dump<span class="blink">▋</span></div>
+      <h2>Fun <b>Facts</b></h2>
+    </div>
+    <div class="facts">
+      <div class="fact reveal"><i class="fa-solid fa-person-swimming"></i><div class="num" data-count="10">0</div><div class="lbl">swimming wins</div></div>
+      <div class="fact reveal"><i class="fa-solid fa-unlock-keyhole"></i><div class="num txt">too many…</div><div class="lbl">CTF solved</div></div>
+      <div class="fact reveal"><i class="fa-brands fa-google"></i><div class="num" data-count="2">0</div><div class="lbl">Google challenges</div></div>
+      <div class="fact reveal"><i class="fa-solid fa-mug-hot"></i><div class="num" data-count="1286">0</div><div class="lbl">coffees consumed</div></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- FOOTER -->
+<footer class="foot">
+  <div class="wrap foot-in">
+    <ul class="socials">
+      <li><a href="https://www.linkedin.com/in/alberto-montefusco" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://github.com/Alberto-00" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+      <li><a href="https://www.ethin.it" target="_blank"><i class="fa-solid fa-rss"></i> EthIN Blog</a></li>
+    </ul>
+    <div class="foot-copy">© <span id="yr">2026</span> Alberto Montefusco · <span class="accent">all rights reserved</span></div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Torna su"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="app.js"></script>
 </body>
 </html>

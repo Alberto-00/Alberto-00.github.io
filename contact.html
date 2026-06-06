@@ -1,258 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="Portfolio">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="format-detection" content="telephone-no">
-    <meta name="apple-mobile-web-app-title" content="Alberto Montefusco | Computer Science Student">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="icons/favicon/blue_team/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="icons/favicon/blue_team/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="icons/favicon/blue_team/favicon-16x16.png">
-    <link rel="manifest" href="icons/favicon/blue_team/site.webmanifest">
-    <meta name="msapplication-TileColor" content="#222">
-    <meta name="theme-color" content="#222">
-
-    <title>Alberto Montefusco | Computer Science Student</title>
-
-    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/library.css">
-    <link rel="stylesheet" href="lib/dark/css/dark.css">
-    <link rel="stylesheet" href="lib/dark/css/font.css">
-    <link rel="stylesheet" href="lib/fontawesome/css/all.css">
-
-    <script src="lib/bootstrap/js/bootstrap.min.js"></script>
-    <script src="lib/jquery/jquery.js"></script>
-    <script src="js/header.js"></script>
-    <script src="js/contact.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>(function(){var t='defense';try{t=localStorage.getItem('am_theme')||'defense';}catch(e){}var d=document.documentElement;d.setAttribute('data-theme',t);d.style.backgroundColor='#0b0e14';})();</script>
+<title>Alberto Montefusco — Contact</title>
+<meta name="description" content="Get in touch with Alberto Montefusco — Red Team Penetration Tester based in Campania, Italy.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Alberto Montefusco">
+<meta property="og:url" content="https://alberto-00.github.io/contact.html">
+<link rel="canonical" href="https://alberto-00.github.io/contact.html">
+<meta property="og:title" content="Alberto Montefusco — Contact">
+<meta property="og:description" content="Reach out to Alberto Montefusco — Red Team Penetration Tester based in Campania, Italy.">
+<meta property="og:image" content="https://alberto-00.github.io/icons/og-logo.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Alberto Montefusco — Contact">
+<meta name="twitter:description" content="Reach out — Red Team Penetration Tester based in Campania, Italy.">
+<meta name="twitter:image" content="https://alberto-00.github.io/icons/og-logo.png">
+<meta name="theme-color" content="#0b0e14">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="icons/favicon-16x16.png">
+<link rel="shortcut icon" href="icons/favicon.ico">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="pages.css">
 </head>
 <body>
 
-<!---<div class="lm-animated-bg" style="background-position: calc(50% + 3.47905px) calc(50% + 2.94572px);"></div>--->
+<div class="bg-grid"></div>
+<canvas id="rain"></canvas>
+<div class="vignette"></div>
+<div class="scanlines"></div>
 
-<!-- Loading animation -->
-<div class="preloader" style="display: none;">
-    <div class="preloader-animation">
-        <div class="preloader-spinner">
-        </div>
+<!-- NAV -->
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="index.html"><img class="brand-logo blue" src="icons/logo-blue.png" alt="AM logo"><img class="brand-logo red" src="icons/logo-red.png" alt="">alberto<b>@</b>montefusco<span class="cur">_</span></a>
+    <div class="nav-right">
+      <ul class="nav-links">
+        <li class="nav-item has-drop">
+          <a href="index.html" class="np">./about</a>
+          <ul class="dropdown">
+            <li><a href="index.html#what">What I Do</a></li>
+            <li><a href="index.html#skills">Soft Skills</a></li>
+            <li><a href="index.html#hobby">Hobby &amp; Interests</a></li>
+            <li><a href="index.html#facts">Fun Facts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-drop">
+          <a href="resume.html" class="np">./resume</a>
+          <ul class="dropdown">
+            <li><a href="resume.html#Education">Education</a></li>
+            <li><a href="resume.html#Experience">Experience</a></li>
+            <li><a href="resume.html#Publications">Publications</a></li>
+            <li><a href="resume.html#Certificates">Certificates</a></li>
+            <li><a href="resume.html#Hard_Skills">Skills Radar</a></li>
+          </ul>
+        </li>
+        <li class="nav-item has-drop">
+          <a href="contact.html" class="np active">./contact</a>
+          <ul class="dropdown">
+            <li><a href="contact.html#find">Find Me</a></li>
+            <li><a href="contact.html#message">Send Message</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a href="documents/CV_Alberto_Montefusco.pdf" target="_blank" class="np">cv.pdf</a></li>
+      </ul>
+      <span class="sw-label">mode</span>
+      <div class="theme-switch" role="group" aria-label="Theme mode">
+        <button data-theme-btn="defense"><i class="fa-solid fa-shield-halved"></i><span class="lbl">DEFENSE</span></button>
+        <button data-theme-btn="hacker"><i class="fa-solid fa-skull"></i><span class="lbl">HACKER</span></button>
+      </div>
+      <button class="nav-toggle" aria-label="menu"><i class="fa-solid fa-terminal"></i></button>
     </div>
-</div>
-<!-- /Loading animation -->
+  </div>
+</nav>
 
-<!-- Scroll To Top Button -->
-<a id="scrollUp" class="one" href="javascript:void(0)">
-    <i class="fa-solid fa-chevron-up"></i>
-</a>
-<!-- /Scroll To Top Button -->
+<main>
+<header class="page-head">
+  <div class="wrap">
+    <span class="kicker">~/contact</span>
+    <h1>Con<span class="accent">tact</span></h1>
+    <div class="sub">ssh into my inbox — ask me anything</div>
+  </div>
+</header>
 
-<div class="page-scroll">
-    <div id="page_container" class="page-container bg-move-effect theme-style-dark animated transition-flip-in-right" data-animation="transition-flip-in-right">
-
-        <!-- Header -->
-        <header id="site_header" class="header">
-            <div class="header-content clearfix">
-
-                <!-- Text Logo -->
-                <div class="text-logo">
-                    <a href="index.html">
-                        <div class="logo-text">
-                            <img src="icons/logo.svg" style="width: 60px; vertical-align: middle;" alt="logo">
-                            Alberto <span>Montefusco</span>
-                        </div>
-                    </a>
-                </div>
-                <!-- /Text Logo -->
-
-                <!-- Navigation -->
-                <div id="toggle" class="site-nav animate mobile-menu-hide">
-                    <ul id="menu-classic-menu" class="leven-classic-menu site-main-menu">
-                        <li id="menu-item-160">
-                            <a href="index.html">About Me <i class="arrow down"></i></a>
-                            <ul class="sub-menu">
-                                <li id="menu-item-167" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="index.html#what_I_Do" data-hover="1">What I DO</a></li>
-                                <li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="index.html#Soft_Skills" data-hover="1">Soft Skills</a></li>
-                                <li id="menu-item-332" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="index.html#Hobby" data-hover="1">Hobby and Interests</a></li>
-                                <li id="menu-item-331" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="index.html#Fun_Facts" data-hover="1">Fun Facts</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-174" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-174">
-                            <a href="resume.html" data-hover="1">Resume <i class="arrow down"></i></a>
-                            <ul class="sub-menu">
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-167"><a href="resume.html#Education" data-hover="1">Education</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-316"><a href="resume.html#Experience" data-hover="1">Experience</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="resume.html#Certificates" data-hover="1">Certificates</a></li>
-                                <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="resume.html#Hard_Skills" data-hover="1">Hard Skills</a></li>
-                            </ul>
-                        </li>
-                        <li id="menu-item-191" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-191 current-menu-item"><a href="contact.html" data-hover="1">Contact</a></li>
-                        <li>
-                            <label class="switch">
-                                <input class="checkbox" type="checkbox" />
-                                <span class="slider round"></span>
-                            </label>
-                        </li>
-                    </ul>
-                </div>
-                <a id="menu-phone" class="menu-toggle mobile-visible">
-                    <i class="fa fa-bars"></i>
-                </a>
-            </div>
-        </header>
-        <!-- /Header -->
-
-        <div id="main" class="site-main">
-            <div id="main-content" class="single-page-content">
-                <div id="primary" class="content-area">
-                    <div class="page-title">
-                        <h1>Contact</h1>
-                        <div class="page-subtitle">
-                            <h4>Ask me anything</h4>
-                        </div>
-                    </div>
-
-                    <div id="content" class="page-content site-content single-post" role="main">
-                        <article id="post-187" class="post-187 page type-page status-publish hentry">
-                            <div class="entry-content">
-                                <div class="fw-page-builder-content"><section class="fw-main-row ">
-                                    <div class="fw-container">
-                                        <div class="row">
-                                            <div class=" col-xs-12 col-sm-12 ">
-                                                <div id="col_inner_46d9c8ad628b9795e60e3b893e0f3fd4" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                    <div class="lmpixels-map">
-                                                        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12091.7135527398!2d14.66423282188026!3d40.74160124992985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bc74c7ac5b975%3A0x602a581d869bc596!2s84015%20Nocera%20Superiore%20SA!5e0!3m2!1sit!2sit!4v1712225256197!5m2!1sit!2sit" title="Nocera Superiore, Campania, Italy" aria-label="Nocera Superiore, Campania, Italy"></iframe>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="row">
-                                            <div class=" col-xs-12 col-sm-4 ">
-                                                <div id="col_inner_7311a7394317832c0b256771fd211c13" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                    <div id="info-list-6212cd089bb08" class="info-list-w-icon">
-                                                        <div class="info-block-w-icon">
-                                                            <div class="ci-icon">
-                                                                <i class="linecons linecons-phone"></i>
-                                                            </div>
-                                                            <div class="ci-text">
-                                                                <h4>(+39) 393 2562 412</h4>
-                                                                <p>Phone number.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="info-block-w-icon">
-                                                            <div class="ci-icon">
-                                                                <i class="linecons linecons-location"></i>
-                                                            </div>
-                                                            <div class="ci-text">
-                                                                <h4>Nocera Superiore</h4>
-                                                                <p>Nocera Superiore is a small city situated in Campania, an Italy region.</p>
-                                                            </div>
-                                                        </div>
-                                                        <div class="info-block-w-icon">
-                                                            <div class="ci-icon">
-                                                                <i class="linecons linecons-mail"></i>
-                                                            </div>
-                                                            <div class="ci-text">
-                                                                <h4>albmont99@gmail.com</h4>
-                                                                <p>Write me for any questions.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="fw-divider-space" style="padding-top: 20px;"></div>
-                                                </div>
-                                            </div>
-
-
-                                            <div class=" col-xs-12 col-sm-8 ">
-                                                <div id="col_inner_b9986d93abfbd322e79534dd003c0cb6" class="fw-col-inner" data-paddings="0px 0px 0px 0px">
-                                                    <div class="block-title">
-                                                        <h2>How Can I Help You?</h2>
-                                                    </div>
-                                                    <form id="contact_form_6212cd089c255" class="contact-form" action="https://formspree.io/f/xqknqjrq" method="POST" novalidate="true">
-                                                        <div class="messages"></div>
-                                                        <div class="controls two-columns">
-                                                            <div class="fields clearfix">
-                                                                <div class="left-column">
-                                                                    <div class="form-group form-group-with-icon">
-                                                                        <input id="name" type="text" name="name" class="form-control" placeholder="Full Name" required="required" data-error="Name is required.">
-                                                                        <div class="form-control-border"></div>
-                                                                        <div class="help-block with-errors"></div>
-                                                                    </div>
-                                                                    <div class="form-group form-group-with-icon">
-                                                                        <input id="email" type="email" name="email" class="form-control" placeholder="Email Address" required="required" data-error="Valid email is required.">
-                                                                        <div class="form-control-border"></div>
-                                                                        <div class="help-block with-errors"></div>
-                                                                    </div>
-                                                                    <div class="form-group form-group-with-icon">
-                                                                        <input id="subject" type="text" name="subject" class="form-control" placeholder="Subject" required="required" data-error="Subject is required.">
-                                                                        <div class="form-control-border"></div>
-                                                                        <div class="help-block with-errors"></div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="right-column">
-                                                                    <div class="form-group form-group-with-icon">
-                                                                        <textarea id="message" name="message" class="form-control" placeholder="Message" rows="7" required="required" data-error="Please, leave me a message."></textarea>
-                                                                        <div class="form-control-border"></div>
-                                                                        <div class="help-block with-errors"></div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <input type="submit" name="submit" class="g-recaptcha button btn-send disabled" value="Send message">
-                                                        </div>
-                                                    </form>
-                                                    <p id="status"></p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </section>
-                                </div>
-                            </div><!-- .entry-content -->
-                        </article><!-- #post-## -->
-                    </div><!-- #content -->
-                </div><!-- #primary -->
-            </div><!-- #main-content -->
-        </div>
-
-        <footer class="site-footer clearfix">
-            <div class="footer-social">
-                <ul class="footer-social-links">
-                    <li>
-                        <a href="https://www.linkedin.com/in/alberto-montefusco" target="_blank">
-                            <img src="icons/contacts/linkedin.svg" style="padding-right: 5px;" alt="" />
-                            LinkedIn
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/Alberto-00" target="_blank">
-                            <img src="icons/contacts/github.svg" style="padding-right: 5px;" alt="" />
-                            GitHub
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.instagram.com/alberto_montefusco_" target="_blank">
-                            <img src="icons/contacts/instagram.svg" style="padding-right: 5px;" alt="" />
-                            Instagram
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.ethin.it" target="_blank">
-                            <img src="icons/contacts/logo-ethin.svg" style="margin-right: 5px; width: 24px" alt="" />
-                            EthIN - Blog
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="footer-copyrights">
-                <p>© 2022 All rights reserved.</p>
-            </div>
-        </footer>
+<section style="padding-top:34px;">
+  <div class="wrap">
+    <div class="map-frame reveal" id="find">
+      <iframe loading="eager" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12091.7135527398!2d14.66423282188026!3d40.74160124992985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133bc74c7ac5b975%3A0x602a581d869bc596!2s84015%20Nocera%20Superiore%20SA!5e0!3m2!1sit!2sit!4v1712225256197!5m2!1sit!2sit" title="Nocera Superiore, Campania, Italy"></iframe>
     </div>
-</div>
-<script src="js/validation.js"></script>
+
+    <div class="contact-grid">
+      <aside class="info-card reveal">
+        <div class="info-row">
+          <div class="ii"><i class="fa-solid fa-phone"></i></div>
+          <div><h4>(+39) 393 2562 412</h4><p>phone number</p></div>
+        </div>
+        <div class="info-row">
+          <div class="ii"><i class="fa-solid fa-location-dot"></i></div>
+          <div><h4>Nocera Superiore</h4><p>Campania, Italy</p></div>
+        </div>
+        <div class="info-row">
+          <div class="ii"><i class="fa-solid fa-envelope"></i></div>
+          <div><h4>albmont99@gmail.com</h4><p>write me anytime</p></div>
+        </div>
+        <div class="info-row">
+          <div class="ii"><i class="fa-brands fa-github"></i></div>
+          <div><h4>Alberto-00</h4><p>github.com/Alberto-00</p></div>
+        </div>
+      </aside>
+
+      <div class="form-card reveal" id="message">
+        <h3>./send_message</h3>
+        <form id="contact_form" action="https://formspree.io/f/xqknqjrq" method="POST" novalidate>
+          <div class="fgrid">
+            <div class="field"><label for="f-name">name</label><input id="f-name" type="text" name="name" placeholder="full name" required></div>
+            <div class="field"><label for="f-email">email</label><input id="f-email" type="email" name="email" placeholder="you@domain.com" required></div>
+          </div>
+          <div class="field"><label for="f-subject">subject</label><input id="f-subject" type="text" name="subject" placeholder="what's this about?" required></div>
+          <div class="field full"><label for="f-message">message</label><textarea id="f-message" name="message" rows="6" placeholder="type your message…" required></textarea></div>
+          <button class="btn btn-primary" type="submit"><i class="fa-solid fa-paper-plane"></i> Send message</button>
+          <div class="form-status" id="status" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-in">
+    <ul class="socials">
+      <li><a href="https://www.linkedin.com/in/alberto-montefusco" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+      <li><a href="https://github.com/Alberto-00" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+      <li><a href="https://www.ethin.it" target="_blank"><i class="fa-solid fa-rss"></i> EthIN Blog</a></li>
+    </ul>
+    <div class="foot-copy">© <span id="yr">2026</span> Alberto Montefusco · <span class="accent">all rights reserved</span></div>
+  </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Torna su"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="app.js"></script>
+<script>
+(function(){
+  var form = document.getElementById('contact_form');
+  var statusEl = document.getElementById('status');
+  if(!form) return;
+  var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  function fieldOf(el){ return el.closest('.field'); }
+  function validate(){
+    var problems = [];
+    form.querySelectorAll('.field').forEach(function(f){ f.classList.remove('invalid'); });
+    var name = form.elements['name'], email = form.elements['email'],
+        subject = form.elements['subject'], message = form.elements['message'];
+    if(!name.value.trim()){ fieldOf(name).classList.add('invalid'); problems.push('name'); }
+    if(!email.value.trim() || !emailRe.test(email.value.trim())){ fieldOf(email).classList.add('invalid'); problems.push('a valid email'); }
+    if(!subject.value.trim()){ fieldOf(subject).classList.add('invalid'); problems.push('subject'); }
+    if(!message.value.trim()){ fieldOf(message).classList.add('invalid'); problems.push('message'); }
+    return problems;
+  }
+  // clear the invalid state as soon as the user edits a field
+  form.querySelectorAll('input,textarea').forEach(function(el){
+    el.addEventListener('input', function(){ fieldOf(el).classList.remove('invalid'); });
+  });
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var problems = validate();
+    if(problems.length){
+      statusEl.className = 'form-status err';
+      statusEl.textContent = '✗ please fill in ' + problems.join(', ') + '.';
+      var firstBad = form.querySelector('.field.invalid input, .field.invalid textarea');
+      if(firstBad) firstBad.focus();
+      return;
+    }
+    statusEl.className = 'form-status'; statusEl.textContent = '> transmitting…';
+    try{
+      var res = await fetch(form.action, { method:'POST', body:new FormData(form), headers:{'Accept':'application/json'} });
+      if(res.ok){
+        statusEl.className='form-status ok';
+        statusEl.textContent='✓ message sent — I\'ll get back to you soon.';
+        form.reset();
+      } else {
+        var data = await res.json().catch(function(){ return {}; });
+        var msg = (data.errors && data.errors.map(function(x){ return x.message; }).join(', ')) || 'something went wrong. try again or email me directly.';
+        statusEl.className='form-status err'; statusEl.textContent='✗ '+msg;
+      }
+    }catch(err){
+      statusEl.className='form-status err'; statusEl.textContent='✗ network error. email me at albmont99@gmail.com';
+    }
+  });
+})();
+</script>
 </body>
 </html>
