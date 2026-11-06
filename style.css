@@ -8,21 +8,29 @@
 :root, [data-theme="defense"]{
   /* ---- DEFENSE · blue team (default) ---- */
   --bg:        #0b0e14;
-  --bg-grid:   rgba(140,170,230,0.05);
+  --bg-grid:   rgba(255,255,255,0.045);
   --bg-elev:   #10141c;
-  --card:      #0f131b;
-  --card-hi:   #131826;
-  --line:      rgba(140,170,230,0.10);
-  --line-hi:   rgba(140,170,230,0.20);
+  --card:      rgba(255,255,255,0.025);   /* translucent: halo + code-rain show through */
+  --card-hi:   rgba(255,255,255,0.045);
+  --line:      rgba(255,255,255,0.09);
+  --line-hi:   rgba(255,255,255,0.16);
 
-  --text:      #c7cfdb;
-  --text-dim:  #737d8c;
-  --text-mut:  #4c5564;
+  --text:      #e7eef6;
+  --text-dim:  #aab6c6;
+  --text-mut:  #7b8798;
 
   --accent:    #3b82f6;           /* blue */
   --accent-d:  #2f6fe0;
   --accent-gl: rgba(59,130,246,0.30);
   --accent-fg: #04101f;           /* text on accent btn */
+
+  --accent-b:      #22d3ee;       /* gradient partner of --accent (cyan) */
+  --accent-b-soft: rgba(34,211,238,0.09);
+  --accent-b-line: rgba(34,211,238,0.35);
+  --halo: radial-gradient(600px circle at 50% 340px, rgba(59,130,246,0.16), rgba(34,211,238,0.06) 45%, transparent 75%);
+  /* resolved on <html>, so they follow [data-theme="hacker"] overrides of --accent / --accent-b */
+  --grad:      linear-gradient(120deg, var(--accent), var(--accent-b));
+  --grad-name: linear-gradient(120deg, #fff 5%, var(--accent) 50%, var(--accent-b) 95%);
 
   --accent2:   #ff3b5c;           /* opposite team */
   --red:       #ff3b5c;
@@ -52,6 +60,11 @@
   --accent-d:  #c5475a;
   --accent-gl: rgba(224,86,104,0.28);
   --accent-fg: #1c0508;
+
+  --accent-b:      #fb923c;       /* gradient partner of --accent (orange) */
+  --accent-b-soft: rgba(251,146,60,0.09);
+  --accent-b-line: rgba(251,146,60,0.35);
+  --halo: radial-gradient(600px circle at 50% 340px, rgba(224,86,104,0.16), rgba(251,146,60,0.06) 45%, transparent 75%);
 
   --accent2:   #3b82f6;
   --red:       #e05668;
@@ -103,10 +116,8 @@ body{
   position:fixed; inset:0; z-index:60; pointer-events:none; mix-blend-mode:overlay; opacity:.14;
   background:repeating-linear-gradient(0deg, rgba(0,0,0,0) 0 2px, rgba(0,0,0,.22) 2px 3px);
 }
-.vignette{
-  position:fixed; inset:0; z-index:1; pointer-events:none;
-  background:radial-gradient(ellipse at 50% 0%, transparent 42%, rgba(0,0,0,.42) 100%);
-}
+/* soft glow behind the page top (hero / page-head); scrolls away with the page */
+.halo{ position:absolute; top:0; left:0; right:0; height:1000px; z-index:1; pointer-events:none; background:var(--halo); }
 
 /* ---- layout ------------------------------------------------------------ */
 .wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 28px; position:relative; z-index:2; }
@@ -120,11 +131,17 @@ main [id], section[id]{ scroll-margin-top:88px; }
 .accent{ color:var(--accent); }
 .red{ color:var(--red); }
 
+/* gradient text (--accent → --accent-b) */
+.sec-head h2 b, .hero h1 .ln2, .page-head h1 .accent, .fact .num, .rstats .st b{
+  background:var(--grad); -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+
 .kicker{
   font-family:var(--mono); font-size:13px; letter-spacing:.08em;
-  color:var(--accent); text-transform:lowercase; display:inline-flex; gap:8px; align-items:center;
+  color:var(--accent); text-transform:lowercase; display:inline-flex; gap:9px; align-items:center;
+  padding:7px 14px; border:1px solid var(--line-hi); border-radius:100px; background:rgba(255,255,255,.03);
 }
-.kicker::before{ content:'//'; color:var(--text-mut); }
+.kicker::before{ content:''; width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 10px var(--accent); }
 
 /* section header styled like a shell command */
 .sec-head{ margin-bottom:34px; }
@@ -137,7 +154,7 @@ main [id], section[id]{ scroll-margin-top:88px; }
 .sec-head h2{
   font-size:clamp(30px,4.4vw,46px); font-weight:700; letter-spacing:-.02em; line-height:1.05;
 }
-.sec-head h2 b{ color:var(--accent); font-weight:700; }
+.sec-head h2 b{ font-weight:700; }
 
 /* ---- buttons ----------------------------------------------------------- */
 .btns{ display:flex; flex-wrap:wrap; gap:14px; }
@@ -148,14 +165,14 @@ main [id], section[id]{ scroll-margin-top:88px; }
   border:1px solid transparent; transition:all .22s var(--ease); white-space:nowrap;
 }
 .btn i{ font-size:13px; }
-.btn-primary{ background:var(--accent); color:var(--accent-fg); box-shadow:0 0 0 0 var(--accent-gl); }
-.btn-primary:hover{ box-shadow:0 0 26px -2px var(--accent-gl); transform:translateY(-2px); }
+.btn-primary{ background:var(--grad); color:var(--accent-fg); box-shadow:0 10px 30px -10px var(--accent-gl); }
+.btn-primary:hover{ box-shadow:0 14px 40px -8px var(--accent-gl); transform:translateY(-2px); }
 .btn-ghost{ background:transparent; color:var(--text); border-color:var(--line-hi); }
 .btn-ghost:hover{ border-color:var(--accent); color:var(--accent); transform:translateY(-2px); }
 
 /* ---- terminal window chrome ------------------------------------------- */
 .term{
-  background:linear-gradient(180deg,var(--card-hi),var(--card));
+  background:linear-gradient(180deg,rgba(19,24,38,.9),rgba(15,19,27,.92)); backdrop-filter:blur(6px);
   border:1px solid var(--line); border-radius:12px; overflow:hidden;
   box-shadow:0 30px 80px -40px rgba(0,0,0,.9), inset 0 1px 0 rgba(255,255,255,.03);
 }
@@ -303,7 +320,7 @@ main [id], section[id]{ scroll-margin-top:88px; }
 .to-top{
   position:fixed; right:22px; bottom:22px; z-index:55; width:46px; height:46px; border-radius:11px;
   display:grid; place-items:center; cursor:pointer; font-size:15px;
-  background:var(--card-hi); border:1px solid var(--line-hi); color:var(--accent);
+  background:var(--bg-elev); border:1px solid var(--line-hi); color:var(--accent);
   opacity:0; transform:translateY(14px) scale(.9); pointer-events:none;
   transition:opacity .3s var(--ease), transform .3s var(--ease), border-color .2s, box-shadow .2s;
 }

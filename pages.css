@@ -11,7 +11,7 @@
   font-size:clamp(42px,7vw,82px); line-height:.98; font-weight:700; letter-spacing:-.035em;
   margin-bottom:8px;
 }
-.hero h1 .ln2{ color:var(--accent); display:block; }
+.hero h1 .ln2{ display:block; width:fit-content; background-image:var(--grad-name); }
 .hero h1 [data-scramble]{ cursor:crosshair; }
 .hero .role{
   font-family:var(--mono); font-size:clamp(16px,2.2vw,22px); color:var(--text); margin:6px 0 22px;
@@ -46,7 +46,8 @@
 /* ---- PROJECTS ---------------------------------------------------------- */
 .proj-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:20px; }
 .card{
-  background:var(--card); border:1px solid var(--line); border-radius:12px; padding:24px 24px 22px;
+  background:linear-gradient(158deg,var(--accent-b-soft),transparent 55%),var(--card);
+  border:1px solid var(--line); border-radius:12px; padding:24px 24px 22px;
   position:relative; transition:border-color .25s var(--ease), transform .25s var(--ease), box-shadow .25s var(--ease);
   overflow:hidden;
 }
@@ -79,9 +80,12 @@
 }
 .card .ghlink:hover{ background:var(--gl-soft); border-color:var(--line-hi); gap:11px; }
 .card .tag{
-  position:absolute; top:18px; right:18px; font-family:var(--mono); font-size:10.5px;
-  color:var(--text-mut); letter-spacing:.08em; text-transform:uppercase;
+  position:absolute; top:18px; right:18px; font-family:var(--mono); font-size:10px; font-weight:600;
+  color:var(--accent-b); letter-spacing:.07em; text-transform:uppercase;
+  display:inline-flex; align-items:center; gap:6px; padding:3px 9px; border-radius:100px;
+  border:1px solid var(--accent-b-line); background:var(--accent-b-soft);
 }
+.card .tag::before{ content:''; width:5px; height:5px; border-radius:50%; background:var(--accent-b); box-shadow:0 0 8px var(--accent-b); }
 
 /* ---- SKILLS (soft) ----------------------------------------------------- */
 .two-col{ display:grid; grid-template-columns:1fr 1fr; gap:22px; }
@@ -109,14 +113,13 @@
 .facts{ display:grid; grid-template-columns:repeat(4,1fr); gap:18px; }
 .fact{ text-align:center; padding:30px 18px; border:1px solid var(--line); border-radius:12px; background:linear-gradient(180deg,var(--card-hi),var(--card)); position:relative; }
 .fact i{ font-size:22px; color:var(--accent); margin-bottom:14px; display:block; }
-.fact .num{ font-family:var(--mono); font-size:40px; font-weight:700; color:var(--text); line-height:1; letter-spacing:-.02em; }
+.fact .num{ font-family:var(--mono); font-size:40px; font-weight:700; line-height:1; letter-spacing:-.02em; width:fit-content; margin:0 auto; }
 .fact .num.txt{ font-size:25px; letter-spacing:0; }
 .fact .lbl{ font-size:13px; color:var(--text-dim); margin-top:10px; font-family:var(--mono); }
 
 /* ---- PAGE HEADER (resume / contact) ----------------------------------- */
 .page-head{ padding:50px 0 20px; }
 .page-head h1{ font-size:clamp(40px,6vw,68px); font-weight:700; letter-spacing:-.03em; line-height:1; }
-.page-head h1 .accent{ color:var(--accent); }
 .page-head .sub{ font-family:var(--mono); color:var(--text-dim); margin-top:14px; font-size:15px; }
 .page-head .sub::before{ content:'> '; color:var(--accent); }
 
@@ -128,7 +131,7 @@
   background:linear-gradient(180deg,var(--card-hi),var(--card)); position:relative; overflow:hidden;
 }
 .rstats .st::after{ content:''; position:absolute; left:0; top:0; bottom:0; width:3px; background:linear-gradient(var(--accent),transparent); opacity:.7; }
-.rstats .st b{ font-family:var(--mono); font-size:30px; font-weight:700; color:var(--accent); line-height:1; letter-spacing:-.02em; }
+.rstats .st b{ font-family:var(--mono); font-size:30px; font-weight:700; line-height:1; letter-spacing:-.02em; width:fit-content; }
 .rstats .st span{ font-family:var(--mono); font-size:11.5px; color:var(--text-dim); letter-spacing:.03em; }
 @media (max-width:680px){ .rstats{ grid-template-columns:1fr 1fr; } }
 
@@ -225,12 +228,17 @@
 .form-status{ font-family:var(--mono); font-size:13px; margin-top:14px; min-height:1.2em; }
 .form-status.ok{ color:#34d399; } .form-status.err{ color:var(--danger); }
 
+/* translucent surfaces (--card): blur the code-rain behind them so text stays readable */
+.card, .panel, .hobby, .fact, .rstats .st, .cert, .pub, .radar-box, .info-card, .form-card{ backdrop-filter:blur(8px); }
+
 /* ---- responsive -------------------------------------------------------- */
 @media (max-width:920px){
   .hero-grid{ grid-template-columns:1fr; gap:38px; }
   .hero-term{ order:2; }
   .radar-wrap{ grid-template-columns:1fr; }
   .contact-grid{ grid-template-columns:1fr; }
+  /* cards get narrower than ~420px here: move the tag pill above the title instead of over it */
+  .card .tag{ position:static; margin-bottom:14px; }
 }
 @media (max-width:680px){
   .proj-grid,.two-col,.hobby-grid,.cert-grid,.fgrid{ grid-template-columns:1fr; }
